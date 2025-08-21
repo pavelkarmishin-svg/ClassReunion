@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Встреча выпускников</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap">
+    <link rel="stylesheet" href="{% static 'reunion/css/style.css' %}">
+</head>
+<body>
+    <div class="school">
+        <div class="login-button-container">
+            <button class="login-button" onclick="location.href='{% url "login" %}'">ВОЙТИ</button>
+        </div>
+        <br>
+        <h1>Встреча выпускников МСШ №2 1996 года выпуска</h1>
+
+        <p>Здравствуйте, одноклассники и одноклассницы! Давно не виделись.
+        <br>
+        В 2026 году будет 30 лет, как мы закончили Медведевскую среднюю школу №2.
+        <br>
+        Каждый уже прожил довольно большую жизнь. Кто-то из вас продолжает видеться каждый день и всё знает друг о друге, а кто-то пошёл своей дорогой и вообще понятия не имеет как живут те, с кем он провёл немало лет в одном классе.
+            <br>
+            Поэтому, я предлагаю вам заполнить этот сайт своими хотя бы короткими историями. Напишите где вы ещё учились, чем занимались, где работали или служили. Что важного произошло в ваших жизнях.
+            Напишите обязательно о своих детях и внуках.
+            <br>
+            Ну и приложите несколько фоток в разных возрастах - от школьных до современных.
+            <br><br>
+            А для защиты от посторонних и ботов ответьте на простой вопрос: <b> </b>
+        </p>
+
+        <form id="director-form">
+            <label for="director-nickname">Какое было прозвище нашего директора?</label>
+            <input type="text" id="director-nickname" name="director-nickname" required>
+            <button type="submit">Ответить</button>
+        </form>
+
+        <div id="registration-form" style="display: none;" >
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" >РЕГИСТРАЦИЯ</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('director-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const directorNickname = document.getElementById('director-nickname').value.toLowerCase();
+            if (directorNickname === 'шеф' || directorNickname === 'шэф') {
+                document.getElementById('registration-form').style.display = 'block';
+                document.getElementById('director-form').style.display = 'none';
+            } else {
+                alert('Да ладно! :) Не помнишь? Напиши на\nEmail: pavel.karmishin@yandex.ru\nTelegram: @Karpn79');
+            }
+        });
+
+        document.getElementById('registration-form').querySelector('button').addEventListener('click', function(event) {
+            event.preventDefault();
+            location.href = '{% url "register" %}';
+        });
+    </script>
+</body>
+</html>
