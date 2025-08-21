@@ -4,34 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="72bbed2e-a7a4-41a5-8d88-75d3801ef059" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/ClassReunion.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassReunion/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassReunion/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassReunion/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassReunion/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ClassReunion/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/apps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/templates/registration/password_reset_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/templates/registration/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/password_reset_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/reunion/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/reunion/css/style.css" afterDir="false" />
+    <list default="true" id="72bbed2e-a7a4-41a5-8d88-75d3801ef059" name="Changes" comment="My first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,26 +41,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;Django Server.ClassReunion.executor&quot;: &quot;Run&quot;,
-    &quot;Python.makemigrations.executor&quot;: &quot;Run&quot;,
-    &quot;Python.migrate.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Programming/Django/ClassReunion/ClassReunion/reunion/templates/reunion/registration&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.CommitDialog&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.ClassReunion.executor": "Run",
+    "Python.makemigrations.executor": "Run",
+    "Python.migrate.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Programming/Django/ClassReunion/ClassReunion/reunion/templates/reunion/registration",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Programming\Django\ClassReunion\ClassReunion\reunion\templates\reunion\registration" />
@@ -201,8 +175,17 @@
       <workItem from="1755093640503" duration="7313000" />
       <workItem from="1755162312485" duration="127000" />
       <workItem from="1755228251261" duration="37392000" />
-      <workItem from="1755701451370" duration="5157000" />
+      <workItem from="1755701451370" duration="6164000" />
     </task>
+    <task id="LOCAL-00001" summary="My first commit">
+      <option name="closed" value="true" />
+      <created>1755762316685</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1755762316685</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +201,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="My first commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="My first commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ClassReunion$migrate.coverage" NAME="migrate Coverage Results" MODIFIED="1755104924033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
