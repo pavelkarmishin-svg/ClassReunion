@@ -27,9 +27,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "pavelkarmishin-svg"
+  }
+}]]></component>
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="2fea36ef-8af8-42be-a5f0-323050fb4326" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/pavelkarmishin-svg/ClassReunion.git",
+    "accountId": "2fea36ef-8af8-42be-a5f0-323050fb4326"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -175,7 +187,7 @@
       <workItem from="1755093640503" duration="7313000" />
       <workItem from="1755162312485" duration="127000" />
       <workItem from="1755228251261" duration="37392000" />
-      <workItem from="1755701451370" duration="6164000" />
+      <workItem from="1755701451370" duration="7053000" />
     </task>
     <task id="LOCAL-00001" summary="My first commit">
       <option name="closed" value="true" />
