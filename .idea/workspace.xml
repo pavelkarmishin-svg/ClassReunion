@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="72bbed2e-a7a4-41a5-8d88-75d3801ef059" name="Changes" comment="My first commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassReunion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassReunion/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +188,7 @@
       <workItem from="1755162312485" duration="127000" />
       <workItem from="1755228251261" duration="37392000" />
       <workItem from="1755701451370" duration="10298000" />
-      <workItem from="1755934904381" duration="1806000" />
+      <workItem from="1755934904381" duration="5533000" />
     </task>
     <task id="LOCAL-00001" summary="My first commit">
       <option name="closed" value="true" />
