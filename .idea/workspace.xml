@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72bbed2e-a7a4-41a5-8d88-75d3801ef059" name="Changes" comment="My first commit">
-      <change afterPath="$PROJECT_DIR$/static/reunion/css/style.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/reunion/templates/reunion/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reunion/templates/reunion/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/reunion/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/reunion/img/school.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/reunion/img/school.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -203,7 +200,7 @@
       <workItem from="1756272110452" duration="1327000" />
       <workItem from="1756273464028" duration="4972000" />
       <workItem from="1756312875579" duration="4104000" />
-      <workItem from="1756379178870" duration="4806000" />
+      <workItem from="1756379178870" duration="6095000" />
     </task>
     <task id="LOCAL-00001" summary="My first commit">
       <option name="closed" value="true" />
