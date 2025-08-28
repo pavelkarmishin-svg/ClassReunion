@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72bbed2e-a7a4-41a5-8d88-75d3801ef059" name="Changes" comment="My first commit">
+      <change afterPath="$PROJECT_DIR$/static/reunion/css/style.sass" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ClassReunion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassReunion/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/templates/reunion/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reunion/templates/reunion/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/reunion/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/reunion/img/school.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/static/reunion/img/school.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +24,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="Sass File" />
         <option value="CSS File" />
       </list>
     </option>
@@ -63,14 +67,15 @@
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Programming/Django/ClassReunion/ClassReunion/reunion/templates/reunion/registration&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/KaRp/AppData/Roaming/npm/sass.cmd&quot;,
     &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -189,7 +194,16 @@
       <workItem from="1755162312485" duration="127000" />
       <workItem from="1755228251261" duration="37392000" />
       <workItem from="1755701451370" duration="10298000" />
-      <workItem from="1755934904381" duration="7931000" />
+      <workItem from="1755934904381" duration="9983000" />
+      <workItem from="1756035435792" duration="15000" />
+      <workItem from="1756056207029" duration="1802000" />
+      <workItem from="1756142952879" duration="2000" />
+      <workItem from="1756144322280" duration="1215000" />
+      <workItem from="1756270732635" duration="1351000" />
+      <workItem from="1756272110452" duration="1327000" />
+      <workItem from="1756273464028" duration="4972000" />
+      <workItem from="1756312875579" duration="4104000" />
+      <workItem from="1756379178870" duration="4806000" />
     </task>
     <task id="LOCAL-00001" summary="My first commit">
       <option name="closed" value="true" />

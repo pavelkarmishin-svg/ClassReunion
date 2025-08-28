@@ -1,459 +1,134 @@
-/* Основные стили */
-body {
-    font-family: Pangolin;
-    /*background-color: #f4f4f9;*/
-    /*color: #333;*/
-    /*margin: 0;*/
-    /*padding: 0;*/
-    /*line-height: 1.6;*/
-    /*overflow: hidden; !* Убираем полосу прокрутки *!*/
+* {
+  box-sizing: border-box;
 }
 
-/* Фоновое изображение */
-.school {
-    background: url("/static/reunion/img/school.jpg") no-repeat center center/cover;
-    background-size: cover; /* Заполняет всю ширину и высоту экрана */
-    background-attachment: fixed; /* Фиксирует фоновое изображение */
-    width: 100%;
-    height: 100vh; /* Высота 100% от высоты экрана */
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
+.main-container {
+  background-image: url("../img/school.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: pangolin;
+  position: relative;
+  display: block;
+  text-align: center;
 }
 
-/* Контейнер для кнопки Войти */
-.login-button-container {
-    text-align: center; /* Центрирование кнопки */
-    margin-top: 20px; /* Отступ сверху */
-/*margin-top: 20px;*/
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-    display: inline-block; /* Чтобы фон был только вокруг текста */
-    background-color: rgba(255, 255, 255, 0.8);
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 123px;
+  height: 63px;
+  position: relative;
+  top: 17px;
+}
+.login-container__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+  height: 34px;
+  border-radius: 7px;
+}
+.login-container__inner:hover {
+  width: 91px;
+  height: 39px;
 }
 
-/* Кнопка Войти */
-.login-button {
-    /*margin-top: 20px;*/
-    padding: 10px 20px; /* Добавляем отступы для текста внутри кнопки */
-    background-color: #516D9D;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Pangolin';
-    font-size: 1.1rem;
-
+.ref {
+  font-size: 20px;
+  color: #DFD0BB;
+  text-decoration: none;
 }
 
-.login-button:hover {
-    background-color: #c66866;
+.container-over-ref {
+  background-color: #76362C;
+  border-radius: 7px;
+}
+.container-over-ref:hover {
+  background-color: #43555F;
 }
 
-.school h1 {
-    margin-top: 20px;
-    margin-bottom: 0px;
-    font-size: 3rem;
-    color: black;
-    font-family: 'Pangolin';
-    position: relative;
-    z-index: 1;
-    /*padding: 30px 40px; !* Добавляем отступы для текста внутри фона *!*/
-    padding-top: 10px;
-    padding-right: 35px;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    display: inline-block; /* Чтобы фон был только вокруг текста */
-    background-color: transparent; /* Убираем фон из h1 */
-    line-height: 1.2; /* Уменьшаем line-height для корректной высоты текста */
+.bordered {
+  background-color: rgba(223, 208, 187, 0.8);
+  border-radius: 13px;
+  backdrop-filter: blur(2px);
 }
 
-.school h1::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый фон */
-    border-radius: 10px; /* Округленные углы */
-    z-index: -1; /* Позиционируем позади текста */
-    padding: 10px 40px; /* Добавляем отступы для увеличения размера фона */
-    box-sizing: border-box; /* Включаем отступы в размер элемента */
-    transform: translate(-10px, -10px); /* Сдвигаем фон немного вверх и влево */
+.header-container {
+  margin-top: 40px;
+  display: inline-block;
+}
+.header-container h1 {
+  padding: 13px;
+  font-size: 40px;
 }
 
-.school p {
-    margin-left: 150px;
-    margin-right: 150px;
-    margin-top: 20px;
-    margin-bottom: 0px;
-    font-size: 20px;
-    color: black;
-    font-family: 'Pangolin';
-    position: relative;
-    z-index: 1;
-    padding: 30px 40px; /* Добавляем отступы для текста внутри фона */
-    display: inline-block; /* Чтобы фон был только вокруг текста */
-    background-color: transparent; /* Убираем фон из p */
-    text-align: left; /* Выравнивание по левому краю */
-    line-height: 1.6; /* Увеличиваем line-height для обзаца */
+.text-container {
+  margin-top: 30px;
+  display: inline-block;
+  max-width: 1000px;
+}
+.text-container p {
+  padding: 13px;
+  font-size: 20px;
+  text-align: left;
+  line-height: 1.5;
 }
 
-.school p::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый фон */
-    border-radius: 10px; /* Округленные углы */
-    z-index: -1; /* Позиционируем позади текста */
-    padding: 10px 40px; /* Добавляем отступы для увеличения размера фона */
-    box-sizing: border-box; /* Включаем отступы в размер элемента */
-    transform: translate(-10px, -10px); /* Сдвигаем фон немного вверх и влево */
+.question-container {
+  margin-top: 30px;
+  display: inline-block;
+  padding-bottom: 13px;
+}
+.question-container__text {
+  padding: 13px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.question-container__input {
+  margin-top: 13px;
+  height: 43px;
+  background-color: #EDE9DE;
 }
 
-/* Форма для прозвища директора */
-#director-form {
-    margin-top: 20px;
-    position: relative;
-    z-index: 1;
-    padding-right: 60px;
-    padding-left: 20px;
-    padding-bottom: 30px;
-    display: inline-block; /* Чтобы фон был только вокруг текста */
-    background-color: transparent; /* Убираем фон из формы */
+.button {
+  margin-top: 20px;
+  font-size: 20px;
+  color: #DFD0BB;
+  text-decoration: none;
+  width: 114px;
+  height: 34px;
+}
+.button:hover {
+  width: 119px;
+  height: 39px;
+  background-color: #43555F;
 }
 
-#director-form::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый фон */
-    border-radius: 10px; /* Округленные углы */
-    z-index: -1; /* Позиционируем позади текста */
-    padding: 10px 40px; /* Добавляем отступы для увеличения размера фона */
-    box-sizing: border-box; /* Включаем отступы в размер элемента */
-    transform: translate(-10px, -10px); /* Сдвигаем фон немного вверх и влево */
+.reg-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 181px;
+  height: 63px;
+  position: relative;
+  top: 17px;
 }
-
-#director-form label {
-    display: block;
-    font-family: 'Pangolin';
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: black;
+.reg-btn-container__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 144px;
+  height: 34px;
+  border-radius: 7px;
 }
-
-#director-form input[type="text"] {
-    width: 100%;
-    max-width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-#director-form button {
-    background-color: #516D9D;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Pangolin';
-    font-size: 1.1rem;
-}
-
-#director-form button:hover {
-    background-color: #c66866;
-}
-
-/* Форма регистрации */
-#registration-form {
-    /*margin-top: 20px;*/
-    position: relative;
-    z-index: 1;
-    padding: 10px 40px; /* Добавляем отступы для текста внутри фона */
-    display: inline-block; /* Чтобы фон был только вокруг текста */
-    background-color: transparent; /* Убираем фон из формы */
-}
-
-#registration-form form {
-    display: inline-block;
-    background-color: rgba(255, 255, 255, 0.8);
-
-
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#registration-form form p {
-    margin-bottom: 15px;
-}
-
-#registration-form form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: black;
-}
-
-#registration-form form input[type="text"],
-#registration-form form input[type="email"],
-#registration-form form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-#registration-form form button {
-    background-color: #516D9D;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Pangolin';
-    font-size: 1.1rem;
-}
-
-#registration-form form button:hover {
-    background-color: #c66866;
-}
-
-a:visited {
-    color: black;
-}
-
-a:hover {
-    color: #c66866;
-}
-
-
-
-/* Новый класс для форм на отдельных страницах */
-.form-container {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый фон */
-    border-radius: 10px; /* Округленные углы */
-    z-index: -1; /* Позиционируем позади текста */
-    padding: 10px 40px; /* Добавляем отступы для увеличения размера фона */
-    box-sizing: border-box; /* Включаем отступы в размер элемента */
-    transform: translate(-10px, -10px); /* Сдвигаем фон немного вверх и влево */
-}
-
-.form-container .form-group {
-    margin-bottom: 15px;
-}
-
-.form-container .form-group label {
-    display: block;
-    font-family: 'Pangolin';
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: black;
-}
-
-.form-container .form-group input[type="text"],
-.form-container .form-group input[type="email"],
-.form-container .form-group input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.form-container form {
-    display: block; /* Поля формы слева */
-    background-color: transparent; /* Убираем фон из формы */
-    padding: 0; /* Убираем внутренние отступы формы */
-}
-
-.form-container form button {
-    background-color: #516D9D;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Pangolin';
-    font-size: 1.1rem;
-    margin-top: 10px; /* Отступ сверху от последнего поля */
-}
-
-.form-container form button:hover {
-    background-color: #c66866;
-}
-
-
-
-/* Новый класс для форм на отдельных страницах */
-.form-container {
-    margin-top: 20px;
-    position: relative;
-    z-index: 1;
-    padding-top: 30px;
-    padding-right: 70px;
-    padding-bottom: 30px;
-    padding-left: 50px;
-    /*padding: 10px 40px; !* Добавляем отступы для текста внутри фона *!*/
-    display: inline-block; /* Чтобы фон был только вокруг текста */
-    background-color: transparent; /* Убираем фон из формы */
-    text-align: left; /* Выравнивание по левому краю */
-}
-
-.form-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(255, 255, 255, 0.8); /* Прозрачный белый фон */
-    border-radius: 10px; /* Округленные углы */
-    z-index: -1; /* Позиционируем позади текста */
-    padding: 10px 40px; /* Добавляем отступы для увеличения размера фона */
-    box-sizing: border-box; /* Включаем отступы в размер элемента */
-    /*transform: translate(-10px, -10px); !* Сдвигаем фон немного вверх и влево *!*/
-}
-
-.form-container .form-group {
-    margin-bottom: 15px;
-}
-
-.form-container .form-group label {
-    display: block;
-    font-family: 'Pangolin';
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: black;
-}
-
-.form-container .form-group input[type="text"],
-.form-container .form-group input[type="email"],
-.form-container .form-group input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.form-container form {
-    display: block; /* Поля формы слева */
-    background-color: transparent; /* Убираем фон из формы */
-    padding: 0; /* Убираем внутренние отступы формы */
-}
-
-.form-container form button {
-    background-color: #516D9D;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Pangolin';
-    font-size: 1.1rem;
-    margin-top: 10px; /* Отступ сверху от последнего поля */
-}
-
-.form-container form button:hover {
-    background-color: #c66866;
-}
-
-/* Медиазапросы для адаптации фонового изображения на маленьких экранах */
-@media (max-width: 768px) {
-    .school {
-        height: auto; /* Автоматическая высота для маленьких экранов */
-        padding: 20px 0; /* Уменьшаем отступы */
-    }
-
-    .school h1 {
-        margin-top: 20px;
-        padding: 20px;
-        font-size: 2.5rem; /* Уменьшаем размер шрифта для заголовка */
-    }
-
-    .school h1::before {
-        padding: 10px;
-    }
-
-    .school p {
-        margin-left: 20px;
-        margin-right: 20px;
-        padding: 20px;
-        font-size: 1.5rem; /* Уменьшаем размер шрифта для абзаца */
-    }
-
-    .school p::before {
-        padding: 10px;
-    }
-
-    .login-button-container {
-        margin-top: 10px;
-        padding: 10px;
-    }
-
-    .login-button-container::before {
-        padding: 10px;
-    }
-
-    .form-container {
-        margin-top: 10px;
-        padding: 10px;
-        width: 100%; /* Полная ширина контейнера */
-        max-width: 100%; /* Максимальная ширина 100% */
-    }
-
-    .form-container::before {
-        padding: 10px;
-    }
-
-    .form-container .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-container .form-group label {
-        display: block;
-        font-family: 'Pangolin';
-        margin-bottom: 5px;
-        font-weight: bold;
-        color: black;
-    }
-
-    .form-container .form-group input[type="text"],
-    .form-container .form-group input[type="email"],
-    .form-container .form-group input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-    }
-
-    .form-container form {
-        display: block; /* Поля формы слева */
-        background-color: transparent; /* Убираем фон из формы */
-        padding: 0; /* Убираем внутренние отступы формы */
-        width: 100%; /* Полная ширина формы */
-        max-width: 100%; /* Максимальная ширина формы */
-    }
-
-    .form-container form button {
-        width: 100%; /* Полная ширина кнопки */
-        max-width: 100%; /* Максимальная ширина кнопки */
-    }
+.reg-btn-container__inner:hover {
+  width: 149px;
+  height: 39px;
 }
