@@ -38,17 +38,32 @@
         <div class="question-container bordered">
             <h2 class="question-container__text">Какое было прозвище у нашего директора?</h2>
             <form action="">
-                <input class="question-container__input" type="text">
+                <input id="answer-input" class="question-container__input" type="text">
                 <br>
-                <button class="container-over-ref button">ОТВЕТИТЬ</button>
+                <button type="button" class="container-over-ref button" onclick="checkAnswer()">ОТВЕТИТЬ</button>
             </form>
         </div>
 
-        <div class="reg-btn-container bordered">
-            <div class="reg-btn-container__inner container-over-ref">
-                <a href="#" class="login-ref ref">РЕГИСТРАЦИЯ</a>
+        <div id="registration-link" class="registration-link-container bordered">
+            <div class="registration-link-container__inner container-over-ref">
+                <a href="{% url 'register' %}" class="login-ref ref">РЕГИСТРАЦИЯ</a>
             </div>
         </div>
+        <script>
+            function checkAnswer() {
+                const input = document.getElementById("answer-input").value.trim().toLowerCase();
+                const validAnswers = ["шеф", "шэф"];
+                const linkBlock = document.getElementById("registration-link");
+
+                if (validAnswers.includes(input)) {
+                    // показываем блок
+                    linkBlock.classList.add("registration-link-container_active");
+                    alert("Верно! Проходи на регистрацию 👍");
+                } else {
+                    alert("Да ладно? 😜 Постучись на @Karpn79 или pavel.karmishin@yandex.ru");
+                }
+            }
+        </script>
     </div>
 </body>
 </html>

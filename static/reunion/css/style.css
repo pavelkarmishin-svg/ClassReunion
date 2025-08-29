@@ -110,8 +110,8 @@
   background-color: #43555F;
 }
 
-.reg-btn-container {
-  display: flex;
+.registration-link-container {
+  display: none;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
@@ -120,7 +120,7 @@
   position: relative;
   top: 17px;
 }
-.reg-btn-container__inner {
+.registration-link-container__inner {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,7 +128,10 @@
   height: 34px;
   border-radius: 7px;
 }
-.reg-btn-container__inner:hover {
+.registration-link-container__inner:hover {
   width: 149px;
   height: 39px;
+}
+.registration-link-container_active {
+  display: flex;
 }
