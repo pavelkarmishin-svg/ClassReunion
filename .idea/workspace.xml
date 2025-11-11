@@ -5,8 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72bbed2e-a7a4-41a5-8d88-75d3801ef059" name="Changes" comment="My first commit">
+      <change afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/base_class.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/contacts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/group_photos.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/manepage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/navigation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/teachers.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/user_info.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/reunion/templates/reunion/user_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/reunion/css/styles_class.sass" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/logged_out.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/password_change_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/password_change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/registration/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/ClassReunion.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ClassReunion.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassReunion/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassReunion/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ClassReunion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ClassReunion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/reunion/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/reunion/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/migrations/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/reunion/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/templates/registration/password_reset_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/templates/registration/register.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/reunion/templates/reunion/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/reunion/templates/reunion/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/templates/reunion/password_reset_form.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/templates/reunion/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/reunion/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reunion/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/reunion/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/reunion/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/reunion/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/reunion/css/style.sass" beforeDir="false" afterPath="$PROJECT_DIR$/static/reunion/css/style.sass" afterDir="false" />
     </list>
@@ -22,9 +55,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
-        <option value="Sass File" />
         <option value="CSS File" />
+        <option value="Sass File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -65,29 +98,33 @@
     &quot;Python.migrate.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/KaRp/AppData/Roaming/npm/sass.cmd&quot;,
-    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Programming/Django/ClassReunion/ClassReunion/templates/registration&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;Sass&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Programming\Django\ClassReunion\ClassReunion\templates\registration" />
+      <recent name="C:\Programming\Django\ClassReunion\ClassReunion\reunion\templates\reunion" />
+      <recent name="C:\Programming\Django\ClassReunion\ClassReunion\reunion\templates\registration" />
       <recent name="C:\Programming\Django\ClassReunion\ClassReunion\reunion\templates\reunion\registration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programming\Django\ClassReunion\ClassReunion\templates\registration" />
+      <recent name="C:\Programming\Django\ClassReunion\ClassReunion\reunion\templates\reunion" />
       <recent name="C:\Programming\Django\ClassReunion\ClassReunion\templates" />
       <recent name="C:\Programming\Django\ClassReunion\ClassReunion\static" />
       <recent name="C:\Programming\Django\ClassReunion\ClassReunion\static\reunion\css" />
-      <recent name="C:\Programming\Django\ClassReunion\ClassReunion\static\reunion" />
-      <recent name="C:\Programming\Django\ClassReunion\ClassReunion" />
     </key>
   </component>
   <component name="RunManager" selected="Django Server.ClassReunion">
@@ -203,7 +240,55 @@
       <workItem from="1756273464028" duration="4972000" />
       <workItem from="1756312875579" duration="4104000" />
       <workItem from="1756379178870" duration="7609000" />
-      <workItem from="1756453844781" duration="4205000" />
+      <workItem from="1756453844781" duration="7481000" />
+      <workItem from="1756526746122" duration="4505000" />
+      <workItem from="1756532510606" duration="1978000" />
+      <workItem from="1756553990782" duration="8676000" />
+      <workItem from="1756622053001" duration="10272000" />
+      <workItem from="1756646249803" duration="6043000" />
+      <workItem from="1756712607924" duration="2729000" />
+      <workItem from="1756725352369" duration="16083000" />
+      <workItem from="1756819438982" duration="1068000" />
+      <workItem from="1756885020621" duration="5132000" />
+      <workItem from="1756891803956" duration="3596000" />
+      <workItem from="1756968275677" duration="3138000" />
+      <workItem from="1756996901096" duration="2854000" />
+      <workItem from="1757088205982" duration="4320000" />
+      <workItem from="1757162356403" duration="5242000" />
+      <workItem from="1757303139378" duration="10335000" />
+      <workItem from="1757411807664" duration="8321000" />
+      <workItem from="1757438149794" duration="2713000" />
+      <workItem from="1757576235077" duration="7981000" />
+      <workItem from="1757594670630" duration="1000" />
+      <workItem from="1757656053398" duration="3931000" />
+      <workItem from="1757846540381" duration="2513000" />
+      <workItem from="1758115657394" duration="147000" />
+      <workItem from="1758115860197" duration="147000" />
+      <workItem from="1758116111713" duration="7935000" />
+      <workItem from="1758465477259" duration="10008000" />
+      <workItem from="1758709963891" duration="7997000" />
+      <workItem from="1758964450794" duration="6347000" />
+      <workItem from="1759143486265" duration="6053000" />
+      <workItem from="1759233274992" duration="1107000" />
+      <workItem from="1759424056137" duration="8177000" />
+      <workItem from="1759655172410" duration="4179000" />
+      <workItem from="1759939325625" duration="6305000" />
+      <workItem from="1760101983530" duration="6942000" />
+      <workItem from="1760256422431" duration="8455000" />
+      <workItem from="1760428575048" duration="7438000" />
+      <workItem from="1760532352771" duration="85000" />
+      <workItem from="1760613520742" duration="1907000" />
+      <workItem from="1761020389987" duration="3277000" />
+      <workItem from="1761044020127" duration="1900000" />
+      <workItem from="1761192724040" duration="8646000" />
+      <workItem from="1761365274841" duration="5956000" />
+      <workItem from="1761453972769" duration="9000" />
+      <workItem from="1761522167394" duration="11267000" />
+      <workItem from="1761711511178" duration="6737000" />
+      <workItem from="1761877694290" duration="42106000" />
+      <workItem from="1762576946114" duration="5520000" />
+      <workItem from="1762674727948" duration="7665000" />
+      <workItem from="1762825884660" duration="6082000" />
     </task>
     <task id="LOCAL-00001" summary="My first commit">
       <option name="closed" value="true" />
@@ -235,7 +320,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="My first commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ClassReunion$migrate.coverage" NAME="migrate Coverage Results" MODIFIED="1755104924033" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/ClassReunion$makemigrations.coverage" NAME="makemigrations Coverage Results" MODIFIED="1755105513931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ClassReunion$migrate.coverage" NAME="migrate Coverage Results" MODIFIED="1762592884094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ClassReunion$makemigrations.coverage" NAME="makemigrations Coverage Results" MODIFIED="1762592876421" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

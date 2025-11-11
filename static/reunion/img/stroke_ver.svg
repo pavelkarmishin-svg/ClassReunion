@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: CorelDRAW 2017 -->
+
+<svg
+   xml:space="preserve"
+   width="60"
+   height="1000"
+   version="1.0"
+   style="clip-rule:evenodd;fill-rule:evenodd;image-rendering:optimizeQuality;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+   viewBox="0 0 60 1000"
+   id="svg6"
+   sodipodi:docname="stroke_ver.svg"
+   inkscape:version="1.4.2 (f4327f4, 2025-05-13)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><sodipodi:namedview
+   id="namedview6"
+   pagecolor="#ffffff"
+   bordercolor="#000000"
+   borderopacity="0.25"
+   inkscape:showpageshadow="2"
+   inkscape:pageopacity="0.0"
+   inkscape:pagecheckerboard="0"
+   inkscape:deskcolor="#d1d1d1"
+   inkscape:zoom="0.62685016"
+   inkscape:cx="919.67752"
+   inkscape:cy="340.59176"
+   inkscape:window-width="1920"
+   inkscape:window-height="991"
+   inkscape:window-x="-9"
+   inkscape:window-y="-9"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="Слой_x0020_1" />
+ <defs
+   id="defs1">
+  <style
+   type="text/css"
+   id="style1">
+   <![CDATA[
+    .str0 {stroke:#FEFEFE;stroke-width:2}
+    .fil2 {fill:none}
+    .fil1 {fill:none;fill-rule:nonzero}
+    .fil0 {fill:#FEFEFE;fill-rule:nonzero}
+   ]]>
+  </style>
+ </defs>
+ <g
+   id="Слой_x0020_1"
+   inkscape:label="Слой 1"
+   inkscape:groupmode="layer">
+  <metadata
+   id="CorelCorpID_0Corel-Layer" />
+  <g
+   id="_2425044782304"
+   transform="rotate(-90,500.00459,502.25219)">
+   <g
+   id="g5">
+    <path
+   class="fil0 str0"
+   d="m 111,35 c 309,-40 398,-20 702,-9 0,0 0,0 0,-1 C 509,14 419,-5 110,34 Z"
+   id="path1" />
+    <path
+   class="fil1 str0"
+   d="M 737,19 C 489,9 398,-2 148,28 387,0 477,9 714,21 474,12 368,3 128,36 313,11 427,12 616,21 448,12 362,10 194,27 359,12 443,14 607,24 351,11 247,19 4,58 420,-5 470,28 877,41 849,38 821,34 793,30 c 20,3 40,6 59,8 -20,-1 -41,-1 -61,-2 6,0 13,0 19,0 C 508,25 420,5 114,44 c 22,-2 44,-4 67,-6 -7,0 -13,1 -20,1 13,-2 26,-3 39,-5 -3,1 -6,2 -10,3 C 355,16 441,15 611,19 471,15 365,16 228,32 345,19 443,17 563,20 453,17 360,18 252,30 c -4,0 -7,0 -11,-1 152,-16 239,-15 393,-11 1,1 3,2 4,3 112,5 219,9 332,9 C 861,30 756,27 647,22 516,15 408,9 275,18 413,9 523,17 658,26 379,12 291,13 20,55 421,-4 478,28 871,41 535,30 440,1 97,44 435,1 527,29 859,40 562,30 448,5 146,39 441,6 546,29 835,39 c -11,-2 -21,-4 -32,-6 15,2 30,4 45,6"
+   id="path2" />
+    <path
+   class="fil1 str0"
+   d="m 630,20 c 83,4 165,7 249,8 -81,-1 -161,-3 -242,-6 81,3 161,6 242,7 -81,-1 -160,-5 -240,-9"
+   id="path3" />
+    <path
+   class="fil0 str0"
+   d="m 66,40 c 314,-41 386,-26 694,-9 -4,0 -8,0 -12,0 C 447,14 373,0 66,41 Z"
+   id="path4" />
+    <path
+   class="fil0 str0"
+   d="m 387,20 c 195,0 395,21 613,23 -1,0 -1,-1 -2,-1 C 782,40 581,20 387,20 Z"
+   id="path5" />
+   </g>
+  </g>
+  <path
+   class="fil2"
+   d="m 520.764,533.24517 c -74,-452.999998 -20,-529.9999985 -20,-1000"
+   id="path6" />
+ </g>
+</svg>

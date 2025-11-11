@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+}
+
+.main-container {
+  background-image: url("../img/school.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: pangolin;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 123px;
+  height: 63px;
+  position: relative;
+  top: 17px;
+}
+.login-container__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 86px;
+  height: 34px;
+  border-radius: 7px;
+}
+.login-container__inner:hover {
+  width: 91px;
+  height: 39px;
+}
+
+.ref {
+  font-size: 1rem;
+  color: #DFD0BB;
+  text-decoration: none;
+}
+
+.container-over-ref {
+  background-color: #76362C;
+  border-radius: 7px;
+  border: solid black 1px;
+}
+.container-over-ref:hover {
+  background-color: #43555F;
+}
+
+.bordered {
+  background-color: rgba(223, 208, 187, 0.8);
+  border-radius: 13px;
+  backdrop-filter: blur(2px);
+}
+
+.header-container {
+  margin-top: 40px;
+  display: inline-block;
+}
+.header-container h1 {
+  padding: 13px;
+  font-size: 2rem;
+}
+
+.text-container {
+  margin-top: 30px;
+  display: inline-block;
+  max-width: 1000px;
+}
+.text-container p {
+  padding: 13px;
+  font-size: 1rem;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.question-container {
+  margin-top: 30px;
+  display: inline-block;
+  padding-bottom: 13px;
+}
+.question-container__text {
+  padding: 13px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.question-container__input {
+  margin-top: 13px;
+  height: 43px;
+  background-color: #EDE9DE;
+}
+
+.button {
+  margin-top: 20px;
+  font-size: 1rem;
+  background-color: #76362C;
+  color: #DFD0BB;
+  text-decoration: none;
+  width: 114px;
+  height: 34px;
+  border-radius: 5px;
+}
+.button:hover {
+  transform: scale(1.1);
+  background-color: #43555F;
+}
+
+.registration-link-container {
+  width: 181px;
+  height: 63px;
+  position: relative;
+  top: 17px;
+  right: -100%;
+}
+.registration-link-container__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 144px;
+  height: 34px;
+  border-radius: 7px;
+}
+.registration-link-container__inner:hover {
+  width: 149px;
+  height: 39px;
+}
+.registration-link-container_active {
+  transition: 1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  right: 0vw;
+}
+
+.form-container {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 13px;
+  position: relative;
+}
+.form-container__form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container__item {
+  padding: 5px;
+}
+.form-container__item input {
+  height: 30px;
+  font-size: 1rem;
+}
+.form-container__item h2 {
+  margin-top: 4px;
+  font-size: 1rem;
+  position: relative;
+  left: 15px;
+  margin-right: 13px;
+}
+.form-container__item h3 {
+  font-size: 0.8rem;
+  position: relative;
+  left: 15px;
+}
+.form-container__item img {
+  height: 30px;
+  position: relative;
+  top: 7px;
+  left: -10px;
+}
+.form-container__item p {
+  margin-top: 13px;
+  display: inline-block;
+  font-size: 0.8rem;
+  max-width: 300px;
+}
+.form-container__button {
+  margin: 10px auto;
+  display: inline-block;
+  width: 150px;
+}
+
+.empty-icon {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+
+.errors-container {
+  display: inline-block;
+  border: solid red 5px;
+  font-size: 1rem;
+  scroll-behavior: auto;
+  margin-top: 1rem;
+  padding: 13px;
+}
+.errors-container h2 {
+  font-size: 30px;
+  color: red;
+  padding: 10px;
+}
+
+.login-main-container {
+  background-image: url("../img/school_login.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  min-height: 100vh;
+  font-family: pangolin;
+  position: relative;
+  display: block;
+  text-align: center;
+}
+
+.forgot-password {
+  text-align: left;
+}
+.forgot-password img {
+  height: 30px;
+}
+.forgot-password a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #76362C;
+  margin-left: 45px;
+}
+
+.icon {
+  width: 30px;
+}
+.icon_big {
+  width: 60px;
+}
+
+.small-text {
+  font-size: 0.5rem;
+}
+
+.icon-container {
+  margin-top: 30px;
+}
+
+.help {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.help img {
+  width: 50px;
+}
+.help a :hover {
+  transform: scale(1.2);
+}

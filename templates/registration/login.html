@@ -1,0 +1,46 @@
+{% extends 'reunion/base.html' %}
+{% load static %}
+{% block title %}Вход на сайт{% endblock %}
+
+{% block content %}
+
+    <section class="login-main-container">
+{#        <div class="tie-left"></div>#}
+        {% if form.errors %}
+            <div class="errors-container errors bordered">
+                <h2>Что-то пошло не так!</h2>
+                <h3>Не нашёл такой почты с таким паролем. Попробуй ещё разок!</h3>
+                <img class = "icon_big" src="{% static 'reunion/img/icon_mistake.png' %}" alt="">
+
+            </div>
+            <br>
+        {% endif %}
+        <div class="header-container bordered">
+            <h1>
+                Введи свою электронную почту и пароль
+            </h1>
+        </div>
+        <br>
+        <div class="form-container bordered">
+            <form method="post" class="form-container__form">
+                {% csrf_token %}
+                <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon_email.png' %}" alt="">
+                    {{ form.username }}
+                </div>
+                <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon-password.png' %}" alt="">
+                    {{ form.password }}
+                </div>
+                <button type="submit" class="form-container__button button"> ВОЙТИ</button>
+                <div class="forgot-password">
+                    <img src="{% static 'reunion/img/icon-forgot-password.png' %}" alt="">
+                    <a href="{% url 'password_reset' %}">Забыл пароль???</a>
+                </div>
+            </form>
+        </div>>
+    </section>
+
+{% endblock %}
+
+

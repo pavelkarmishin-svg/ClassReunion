@@ -1,0 +1,17 @@
+{% extends 'reunion/base_class.html' %}
+{% load static %}
+{% block title %}Выход из системы{% endblock %}
+
+{% block content %}
+        <div class="header-container">
+        <h1>
+            НУ, ТЫ ЗАХОДИ ЕСЛИ ЧТО...
+        </h1>
+        <div class="wellcome-picture-container">
+            <img src="{% static 'reunion/img/wellcome.svg'%}" alt="">
+        </div>
+        <div class="nav-container">
+            <a href="{% url 'login' %}">Хочу обратно</a>
+        </div>
+    </div>
+{% endblock %}

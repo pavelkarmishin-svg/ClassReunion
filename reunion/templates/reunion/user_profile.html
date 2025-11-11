@@ -1,0 +1,331 @@
+
+{% extends 'reunion/base_class.html' %}
+{% load static %}
+{% block title %}Личный кабинет одноклассника{% endblock %}
+
+{% block content %}
+{#заголовок    #}
+    <div class="contacts-container">
+        <a href={% url 'contacts' %}>
+            <div class="user-data__icon">
+                <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon-help.png' %}" alt="">
+            </div>
+        </a>
+    </div>
+    <div class="header-container">
+        <h1>
+            ЛИЧНЫЙ КАБИНЕТ
+        </h1>
+    </div>
+
+{#    Верхний контейнер#}
+    <div class="upper-container">
+
+{#Карточка данных пользователя    #}
+        <div class="user-data">
+            <form method="post">
+                {% csrf_token %}
+                 <div class="user-data__line">
+                    <div class="user-data__icon">
+                        <img class="icon" src="{% static 'reunion/img/white_icons/icon-adult.png' %}" alt="">
+                    </div>
+                    <div class="user-data__label">
+                        <p>Настоящее имя</p>
+                    </div>
+                    <div class="user-data__form-input">
+                        {{ user_form.first_name }}
+                    </div>
+                </div>
+                <div class="user-data__line">
+                    <div class="user-data__icon">
+                        <img class="icon" src="{% static 'reunion/img/white_icons/icon-adult.png' %}" alt="">
+                    </div>
+                    <div class="user-data__label">
+                        <p>Настоящая фамилия</p>
+                    </div>
+                    <div class="user-data__form-input">
+                        {{ user_form.last_name }}
+                    </div>
+                </div>
+                <div class="user-data__line">
+                    <div class="user-data__icon">
+                        <img class="icon" src="{% static 'reunion/img/white_icons/icon-maiden.png' %}" alt="">
+                    </div>
+                    <div class="user-data__label">
+                        <p>Девичья фамилия</p>
+                    </div>
+                    <div class="user-data__form-input">
+                        {{ user_form.maiden_name }}
+                    </div>
+                </div>
+                <div class="user-data__line">
+                    <div class="user-data__icon">
+                        <a href="{{ user.telegram }}">
+                            <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_telegram.png' %}" alt="">
+                        </a>
+                    </div>
+                    <div class="user-data__label">
+                        <p>Телега</p>
+                    </div>
+                    <div class="user-data__form-input">
+                        {{ user_form.telegram }}
+                    </div>
+                </div>
+                <div class="user-data__line">
+                    <a href={{ user.ok_profile }}>
+                        <div class="user-data__icon">
+                            <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_ok.png' %}" alt="">
+                        </div>
+                    </a>
+                    <div class="user-data__label">
+                        <p>Одноклассники</p>
+                    </div>
+                    <div class="user-data__form-input">
+                        {{ user_form.ok_profile }}
+                    </div>
+                </div>
+                <div class="user-data__line">
+                    <a href="{{ user.vk_profile }}">
+                        <div class="user-data__icon">
+                            <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_vk.png' %}" alt="">
+                        </div>
+                    </a>
+                    <div class="user-data__label">
+                        <p>Вконтакте</p>
+                    </div>
+                    <div class="user-data__form-input">
+                        {{ user_form.vk_profile }}
+                    </div>
+                </div>
+                <div class="user-data__button">
+                    <button class="button" type="submit" name="action" value="save_profile">
+                        СОХРАНИТЬ
+                    </button>
+                </div>
+            </form>
+            <div class="decor-stroke ">
+                <img class="horizontal" src="{% static 'reunion/img/stroke_hor.svg' %}" alt="">
+            </div>
+{#Навигация            #}
+            <div class="nav-container">
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="button_white">Выйти</button>
+                </form>
+                <a href="{% url 'password_change_custom' %}" >Сменить пароль</a>
+                <a href="{% url 'mainpage' %}">На главную</a>
+            </div>
+            <div class="decor-stroke ">
+                <img class="horizontal" src="{% static 'reunion/img/stroke_hor.svg' %}" alt="">
+            </div>
+{#Моя история#}
+            <div class="my-history-container">
+                <h2>Моя история</h2>
+                <form method="post" enctype="multipart/form-data" class="profile-picture__form">
+                    {% csrf_token %}
+                    {{ my_history_form.history }}
+                    <div class="user-data__button">
+                        <button class="button" type="submit" name="action" value="change_history">
+                            СОХРАНИТЬ
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+        
+{#Вертикальная черта        #}
+        <div class="decor-stroke ">
+            <img class="vertical" src="{% static 'reunion/img/stroke_ver.svg' %}" alt="">
+        </div>
+        
+        
+        
+{#Фотографии стар и мал        #}
+
+        <div class="young-teen-pictures-container">
+            <div class="profile-picture young">
+                <h2>Я в младшей школе</h2>
+                <img src="{{ user.picture_young.url }}" alt="">
+
+                <form method="post" enctype="multipart/form-data" class="profile-picture__form">
+                    {% csrf_token %}
+                    <label for="id_picture_young" class="button button_upload">
+                        ЗАМЕНИТЬ ФОТО
+                    </label>
+                    {{ young_form.picture_young }}
+                    <input type="hidden" name="action" value="save_young">
+                    <button type="submit" hidden>Upload</button>
+                </form>
+            </div>
+            <div class="profile-picture teenager">
+                <h2>Я в старшей школе</h2>
+                <img src="{{ user.picture_teenager.url }}" alt="">
+                <form method="post" enctype="multipart/form-data" class="profile-picture__form">
+                    {% csrf_token %}
+                    <label for="id_picture_teenager" class="button button_upload">
+                        ЗАМЕНИТЬ ФОТО
+                    </label>
+                    {{ teenager_form.picture_teenager }}
+                    <input type="hidden" name="action" value="save_teenager">
+                    <button type="submit" hidden>Upload</button>
+                </form>
+            </div>
+            <div class="profile-picture old">
+                <h2>Я сейчас</h2>
+                <img src="{{ user.picture_old.url }}" alt="">
+                <form method="post" enctype="multipart/form-data" class="profile-picture__form">
+                    {% csrf_token %}
+                    <label for="id_picture_old" class="button button_upload">
+                        ЗАМЕНИТЬ ФОТО
+                    </label>
+                    {{ old_form.picture_old }}
+                    <input type="hidden" name="action" value="save_old">
+                    <button type="submit" hidden>Upload</button>
+                </form>
+            </div>
+        </div>
+   
+    </div>
+{#Галерея    #}
+    <div class="gallery-container">
+        <div class="decor-stroke ">
+            <img class="horizontal" src="{% static 'reunion/img/stroke_hor.svg' %}" alt="">
+        </div>
+        <div class="gallery-container__header">
+            <h2>Мой фотоальбом</h2>
+        </div>
+        <div class="gallery-container__upload">
+            <form method="post" enctype="multipart/form-data" class="profile-picture__form">
+                {% csrf_token %}
+                {{ user_gallery_form}}
+                <input type="hidden" name="action" value="add_photo">
+                <button type="submit" class="button">ЗАГРУЗИТЬ</button>
+            </form>
+        </div>
+        <div class="gallery-container__gallery">
+            {% for photo in user.gallery.all %}
+                <div class="gallery-container__gallery__item">
+                    <div class="gallery-container__gallery__photo" id="photo-{{ photo.id }}">
+                        <div class="gallery-container__gallery__image">
+                            <img src="{{ photo.image.url }}" alt="">
+                        </div>
+                        <div class="gallery-container__gallery__item__delete">
+                            <form method="post" >
+                                {% csrf_token %}
+                                <input type="hidden" name="action" value="delete_photo">
+                                <input type="hidden" name="photo_id" value="{{ photo.id }}">
+                                <button type="submit" class="button button_delete">
+                                    <img src="{% static 'reunion/img/button-delete.png' %}" alt="">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                            
+                    <div class="comments comments__write-comment">
+                        <form method="post" class="comment-form">
+                            {% csrf_token %}
+                            {{ comment_form.text }}
+                            <input type="hidden" name="action" value="add_comment">
+                            <input type="hidden" name="photo_id" value="{{ photo.id }}">
+                            <button type="submit" class="button">Отправить</button>
+                        </form>
+                    </div>
+                    
+                    {% if photo.comments.all %}
+                        <div class="comments">
+                          {% for comment in photo.comments.all %}
+                            <div class="comment">
+                                <div class="comment__author">
+                                    {{ comment.author.first_name }} {{ comment.author.last_name }} 
+                                    {% if  comment.author.maiden_name %}
+                                        ({{ comment.author.maiden_name }})
+                                    {% endif %}
+                                </div>
+                                <div class="comment__date">{{ comment.created_at|date:"d.m.Y H:i" }}</div>
+                                <div class="comment__comment">
+                                    <div class="comment__comment__text">
+                                        {{ comment.text|linebreaksbr }}
+                                    </div>
+                                    <div class="comment__comment__delete-button">
+                                        {% if comment.author == request.user %}
+                                        <form method="post" >
+                                          {% csrf_token %}
+                                          <input type="hidden" name="action" value="delete_comment">
+                                          <input type="hidden" name="comment_id" value="{{ comment.id }}">
+                                          <button type="submit" class="delete-comment">
+                                              <img src="{% static 'reunion/img/button-delete-black.png' %}" alt="">
+                                          </button>
+                                        </form>
+                                    {% endif %}
+                                    </div>
+                                </div>
+                             </div>
+                          {% endfor %}
+                        
+                        </div>
+                    {% endif %}
+                
+                    <div class="decor-stroke decor-stroke_center">
+                        <img class="horizontal" src="{% static 'reunion/img/stroke_hor.svg' %}" alt="">
+                    </div>
+                </div>
+
+            {% endfor %}
+            {% if photos %}
+                <div class="gallery-container__upload" id="load-file">
+                    <form method="post" enctype="multipart/form-data" class="profile-picture__form">
+                    {% csrf_token %}
+                    {{ user_gallery_form}}
+                    <input type="hidden" name="action" value="add_photo">
+                    <button type="submit" class="button">ЗАГРУЗИТЬ</button>
+                    </form>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+
+    <br>
+    {% if form.errors %}
+        <div class="errors-container errors bordered">
+            <h2>Что-то пошло не так!</h2>
+            {{ form.errors }}
+            <img class = "icon_big" src="{% static 'reunion/img/icon_mistake.png' %}" alt="">
+        </div>
+        <br>
+    {% endif %}
+
+{% include 'reunion/navigation.html' %}
+    <script>
+        document.getElementById("id_picture_young").addEventListener("change", function() {
+        this.form.submit();
+        });
+    </script>
+    <script>
+        document.getElementById("id_picture_teenager").addEventListener("change", function() {
+        this.form.submit();
+        });
+    </script>
+    <script>
+        document.getElementById("id_picture_old").addEventListener("change", function() {
+        this.form.submit();
+        });
+    </script>
+    <script>
+        document.getElementById("id-my-history").addEventListener("change", function() {
+        this.form.submit();
+        });
+    </script>
+    <script>
+        document.addEventListener("input", function (e) {
+          if (e.target.classList.contains("auto-resize")) {
+            e.target.style.height = "auto";
+            e.target.style.height = e.target.scrollHeight + "px";
+          }
+        });
+    </script>
+
+
+{% endblock %}

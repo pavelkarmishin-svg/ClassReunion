@@ -1,0 +1,52 @@
+{% load static %}
+
+<div class="navigation-container"> 
+        <div class="navigation-container__in">
+            <a href="{% url 'mainpage' %}">На главную</a>
+            {% if request.user.is_authenticated %}
+                <form action="{% url 'logout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="button_white">Выйти</button>
+                </form>
+            {% else %}
+                <form action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="button_white">Войти</button>
+                </form>
+            {% endif %}
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'profile' %}">Личный кабинет</a>
+            {% endif %}
+            <a href="{% url 'group_photos' %}">Групповые фото</a>
+            <a href="{% url 'teachers' %}">Учителя</a>
+            
+        </div>
+        <div class="navigation-container__out">
+            {% if user.telegram %}
+                <div class="user-data__icon">
+                    <a href="{{ user.telegram }}">
+                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_telegram.png' %}" alt="">
+                    </a>
+                </div>
+            {% endif %}
+            {% if user.vk_profile %}
+                <a href="{{ user.vk_profile }}">
+                    <div class="user-data__icon">
+                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_vk.png' %}" alt="">
+                    </div>
+                </a>
+            {% endif %}
+            {% if user.ok_profile %}
+                <a href={{ user.ok_profile }}>
+                    <div class="user-data__icon">
+                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_ok.png' %}" alt="">
+                    </div>
+                </a>
+            {% endif %}
+            <a href={% url 'contacts' %}>
+                <div class="user-data__icon">
+                    <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon-help.png' %}" alt="">
+                </div>
+            </a>
+        </div>
+    </div>

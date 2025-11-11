@@ -1,0 +1,33 @@
+{% extends 'reunion/base_class.html' %}
+
+{% load static %}
+{% block title %}
+    Связь с разработчиком
+{% endblock %}
+{% block content %}
+    {% include 'reunion/navigation.html' %}
+    <div class="header-container header-container_user-info">
+        <h1>
+            Связаться с разработчиком
+        </h1>
+    </div>
+    <div class="contacts">
+        <div class="contacts__item">  
+                <a href="https://t.me/Karpn79">
+                    <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_telegram.png' %}" alt="">
+                </a>
+                <a href="https://t.me/Karpn79">
+                    https://t.me/Karpn79
+                </a>
+        </div>
+        <div class="contacts__item">  
+                <a href="mailto:pavel.karmishin@yandex.ru">
+                    <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_email.png' %}" alt="">
+                </a>
+                <a href="mailto:pavel.karmishin@yandex.ru">
+                    pavel.karmishin@yandex.ru
+                </a>
+        </div> 
+        
+    </div>
+{% endblock %}

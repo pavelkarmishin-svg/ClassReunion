@@ -1,0 +1,88 @@
+
+{% extends 'reunion/base.html' %}
+{% load static %}
+{% block title %}Регистрация одноклассника{% endblock %}
+
+{% block content %}
+    <section class="main-container">
+{#        <div class="tie-left"></div>#}
+        <div class="header-container bordered">
+            <h1>
+                РЕГИСТРАЦИЯ
+            </h1>
+        </div>
+        <br>
+        {% if form.errors %}
+            <div class="errors-container errors bordered">
+                <h2>Что-то пошло не так!</h2>
+                {{ form.errors }}
+                <img class = "icon_big" src="{% static 'reunion/img/icon_mistake.png' %}" alt="">
+
+            </div>
+            <br>
+        {% endif %}
+        <div class="form-container bordered">
+            <form method="post" class="form-container__form">
+                {% csrf_token %}
+                <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon-adult.png' %}" alt="">
+                    {{ form.first_name }}
+                    <h2>Настоящее имя</h2>
+                </div>
+                <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon-adult.png' %}" alt="">
+                    {{ form.last_name }}
+                    <h2>Настоящая фамилия</h2>
+                </div>
+                <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon-maiden.png' %}" alt="">
+                    {{ form.maiden_name }}
+                    <h2>Девичья фамилия <br></h2>
+                    <h3>ну или фамилия с которой вы учились в школе</h3>
+                </div>
+                <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon_telegram.png' %}" alt="">
+                    {{ form.telegram }}
+                    <h2>Телеграм <br></h2>
+                    <h3>необязательно, видно другим пользователям</h3>
+                </div>
+                <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon_VK.png' %}" alt="">
+                    {{ form.vk_profile }}
+                    <h2>Профиль Вконтакте <br></h2>
+                    <h3>необязательно, видно другим пользователям</h3>
+                </div>
+                <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon_ok.png' %}" alt="">
+                    {{ form.ok_profile }}
+                    <h2>Профиль Одноклассники <br></h2>
+                    <h3>необязательно, видно другим пользователям</h3>
+                </div>
+                <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon_email.png' %}" alt="">
+                    {{ form.email }}
+                    <h2>Электронная почта <br>обязательно, не видно другим пользователям</h2>
+                </div>
+                <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon-password.png' %}" alt="">
+                    {{ form.password1 }}
+                    <h2>Пароль</h2>
+                </div>
+                 <div class="form-container__item">
+                     <img src="{% static 'reunion/img/icon-password.png' %}" alt="">
+                    {{ form.password2 }}
+                    <h2>И ещё раз пароль</h2>
+                     <p class="small-text">Пароль не должен быть слишком похож на другую вашу личную информацию.
+Ваш пароль должен содержать как минимум 8 символов.
+Пароль не должен быть слишком простым и распространенным.
+Пароль не может состоять только из цифр.</p>
+                </div>
+                <button type="submit" class="form-container__button button"> РЕГИСТРАЦИЯ</button>
+            </form>
+        </div>
+        <br>
+
+
+
+    </section>
+{% endblock %}

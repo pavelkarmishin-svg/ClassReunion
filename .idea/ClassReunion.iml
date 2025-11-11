@@ -23,7 +23,10 @@
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/../ClassReunion\templates" />
+        <option value="$MODULE_DIR$/templates" />
+        <option value="$MODULE_DIR$/templates/registration" />
+        <option value="$MODULE_DIR$/reunion/templates" />
+        <option value="$MODULE_DIR$/reunion/templates/reunion" />
       </list>
     </option>
   </component>

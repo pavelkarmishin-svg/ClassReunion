@@ -12,21 +12,28 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 
 from pathlib import Path
 import os
-
+from dotenv import load_dotenv
+# from django.contrib.sites.models import Site
+#
+SITE_ID = 1
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(BASE_DIR / '.env')
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-14qtpe@4#427k)_m6!a&r3-m49och4r=(f7#pn(1kxvp8z$sgm'
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'dev-secret-for-local')
+if not SECRET_KEY:
+    raise RuntimeError("DJANGO_SECRET_KEY is not set")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '0') == '1'
 
-ALLOWED_HOSTS = ["class-reunion-1996.ru", "www.class-reunion-1996.ru", "localhost"]
+ALLOWED_HOSTS = os.environ.get('DJANGO_ALLOWED_HOSTS', 'localhost').split(',')
 
 
 # Application definition
@@ -58,8 +65,7 @@ ROOT_URLCONF = 'ClassReunion.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -107,8 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Internationalization
 # https://docs.djangoproject.com/en/5.2/topics/i18n/
-
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru'
 
 TIME_ZONE = 'UTC'
 
@@ -130,3 +135,35 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'reunion.User'
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.yandex.ru"
+EMAIL_PORT = 465  # или 587
+EMAIL_USE_SSL = True  # если порт 465
+# EMAIL_USE_TLS = True  # если порт 587
+
+EMAIL_HOST_USER = "pavel.karmishin@yandex.ru"
+EMAIL_HOST_PASSWORD = "dleqeffkveqrcfao"
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+LOGIN_REDIRECT_URL = '/profile/'
+
+# SECURE_SSL_REDIRECT = True
+# # если SSL завершён на прокси (nginx), поставь:
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+#
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True  # (см. W016)
+#
+# CSRF_TRUSTED_ORIGINS = [
+#     'https://class-reunion-1996.ru',
+#     'https://www.class-reunion-1996.ru',
+# ]
+#
+# SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"  # или stricter
+# X_FRAME_OPTIONS = 'DENY'  # защита от clickjacking
+# SECURE_CONTENT_TYPE_NOSNIFF = True
+# SECURE_BROWSER_XSS_FILTER = True  # устаревшее, но можно

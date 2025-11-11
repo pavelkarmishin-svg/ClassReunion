@@ -5,6 +5,8 @@ $hover-color: #43555F
 *
     box-sizing: border-box
 
+
+
 .main-container
     background-image: url("../img/school.jpg")
     background-attachment: fixed
@@ -21,11 +23,11 @@ $hover-color: #43555F
 
 .login-container
     display: flex
-    justify-content: center
+    justify-content: space-around
     align-items: center
     margin: 0 auto
     //padding: 10px
-    width: 123px
+    width: 266px
     height: 63px
     position: relative
     top: 17px
@@ -35,9 +37,11 @@ $hover-color: #43555F
         display: flex
         justify-content: center
         align-items: center
-        width: 86px
+        width: 98px
         height: 34px
         border-radius: 7px
+        padding: 19px
+        //margin-right: 20px
         //text-align: center
         //padding-top: 5px
         &:hover
@@ -48,14 +52,16 @@ $hover-color: #43555F
 
 
 
+
 .ref
-    font-size: 20px
+    font-size: 1rem
     color: $light
     text-decoration: none
 
 .container-over-ref
     background-color: $brown
     border-radius: 7px
+    border: solid black 1px
     &:hover
         background-color: $hover-color
 
@@ -72,7 +78,7 @@ $hover-color: #43555F
 
     h1
         padding: 13px
-        font-size: 40px
+        font-size: 2rem
 
 .text-container
     margin-top: 30px
@@ -80,7 +86,7 @@ $hover-color: #43555F
     max-width: 1000px
     p
         padding: 13px
-        font-size: 20px
+        font-size: 1rem
         text-align: left
         line-height: 1.5
 
@@ -90,7 +96,7 @@ $hover-color: #43555F
     padding-bottom: 13px
     &__text
         padding: 13px
-        font-size: 20px
+        font-size: 1rem
         font-weight: bold
     &__input
         margin-top: 13px
@@ -101,25 +107,26 @@ $hover-color: #43555F
 
 .button
     margin-top: 20px
-    font-size: 20px
+    font-size: 1rem
+    background-color: $brown
     color: $light
     text-decoration: none
     width: 114px
     height: 34px
+    border-radius: 5px
     &:hover
-        width: 119px
-        height: 39px
+        //width: 119px
+        //height: 39px
+        transform: scale(1.1)
         background-color: $hover-color
 
 .registration-link-container
-    display: none
-    justify-content: center
-    align-items: center
-    margin: 0 auto
+
     width: 181px
     height: 63px
     position: relative
     top: 17px
+    right: -100%
 
     &__inner
         display: flex
@@ -133,8 +140,119 @@ $hover-color: #43555F
             height: 39px
 
     &_active
+        transition: 1s
         display: flex
+        justify-content: center
+        align-items: center
+        margin: 0 auto
+        right: 0vw
+
+.form-container
+    display: inline-block
+    margin: 20px auto
+    padding: 13px
+    position: relative
+    &__form
+        display: flex
+        flex-direction: column
+    &__item
+        padding: 5px
+        input
+            height: 30px
+            font-size: 1rem
+        h2
+            margin-top: 4px
+            font-size: 1rem
+            position: relative
+            left: 15px
+            margin-right: 13px
+        h3
+            font-size: 0.8rem
+            position: relative
+            left: 15px
+        img
+            height: 30px
+            position: relative
+            top: 7px
+            left: -10px
+        p
+            margin-top: 13px
+            display: inline-block
+            font-size: 0.8rem
+            max-width: 300px
+    &__button
+            margin: 10px auto
+            display: inline-block
+            width: 150px
 
 
+.empty-icon
+    height: 30px
+    width: 30px
+    //border: solid 1px
+    display: inline-block
 
-  
+.errors-container
+    display: inline-block
+    //flex-direction: column
+    border: solid red 5px
+    font-size: 1rem
+    scroll-behavior: auto
+    margin-top: 1rem
+    padding: 13px
+    h2
+        font-size: 30px
+        color: red
+        padding: 10px
+
+.login-main-container
+    background-image: url("../img/school_login.jpg")
+    background-attachment: fixed
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: center
+    width: 100%
+    min-height: 100vh
+    font-family: pangolin
+    position: relative
+    display: block
+    text-align: center
+
+.forgot-password
+    text-align: left
+    img
+        height: 30px
+    a
+        font-size: 1rem
+        text-decoration: none
+        color: $brown
+        margin-left: 45px
+
+.icon
+    width: 30px
+    &_big
+        width: 60px
+
+.small-text
+    font-size: 0.5rem
+
+.icon-container
+    margin-top: 30px
+
+.help
+    position: absolute
+    top: 30px
+    right: 30px
+    width: 70px
+    height: 70px
+    display: flex
+    justify-content: center
+    align-items: center
+
+    img
+        width: 50px
+    a
+        :hover
+            transform: scale(1.2)
+
+        //margin: auto

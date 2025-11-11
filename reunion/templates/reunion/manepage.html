@@ -1,0 +1,27 @@
+
+{% extends 'reunion/base_class.html' %}
+{% load static %}
+{% block title %}Главная страница - список всех одноклассников{% endblock %}
+
+{% block content %}
+{% include 'reunion/navigation.html' %}
+
+    <div class="header-container header-container_user-info">
+        <h1>
+            ВЫПУСК МСШ №2 1996 ГОДА
+        </h1>
+    </div>
+    
+   <div class="users-container">
+        <ul>
+            {% for user in users %}
+                <li>
+                    <img src="{{ user.picture_young.url }}" alt="">
+                    <a href="{{ user.get_url }}">{{ user.first_name }} {{ user.last_name }} {% if user.maiden_name %} ({{ user.maiden_name }}) {% endif %}</a>
+                </li>
+            {% endfor %}
+        </ul>
+   </div> 
+{% include 'reunion/navigation.html' %}
+
+{% endblock %}

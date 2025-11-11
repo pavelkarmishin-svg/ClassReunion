@@ -1,0 +1,119 @@
+
+{% extends 'reunion/base_class.html' %}
+{% load static %}
+{% block title %}
+    {{ user.first_name }} {{ user.last_name }}
+    {% if  user.maiden_name %}
+        ({{ user.maiden_name }})
+    {% endif %}
+{% endblock %}
+{% block content %}
+
+
+    {% include 'reunion/navigation.html' %}
+    
+    <div class="header-container header-container_user-info">
+        <h1>
+            {{ user.first_name }} {{ user.last_name }}
+            {% if user.maiden_name %}
+                ({{ user.maiden_name }})
+            {% endif %}
+        </h1>
+    </div>
+    <div class="gallery-container">
+        <div class="gallery-container__header">
+            {{ user.first_name }} в начальной школе
+        </div>
+        <div class="gallery-container__gallery__photo">
+            <img src="{{ user.picture_young.url }}" alt="">
+        </div>
+        <div class="gallery-container__header">
+            {{ user.first_name }} в старшей школе
+        </div>
+        <div class="gallery-container__gallery__photo">
+            <img src="{{ user.picture_teenager.url }}" alt="">
+        </div>
+        <div class="gallery-container__header">
+            {{ user.first_name }} сейчас
+        </div>
+        <div class="gallery-container__gallery__photo">
+            <img src="{{ user.picture_old.url }}" alt="">
+        </div>
+        <div class="decor-stroke decor-stroke_center">
+            <img class="horizontal" src="{% static 'reunion/img/stroke_hor.svg' %}" alt="">
+        </div>
+        {% if user.history %}
+            <div class="gallery-container__history">
+                <p>
+                    {{ user.history|linebreaksbr }}
+                </p>
+            </div>
+        {% endif %}
+        <div class="decor-stroke decor-stroke_center">
+            <img class="horizontal" src="{% static 'reunion/img/stroke_hor.svg' %}" alt="">
+        </div>
+        
+        <div class="gallery-container__gallery">
+        {% for photo in user.gallery.all %}
+        <div class="gallery-container__gallery__item">
+            <div class="gallery-container__gallery__photo" id="photo-{{ photo.id }}">
+                <div class="gallery-container__gallery__image">
+                    <img src="{{ photo.image.url }}" alt="">
+                </div>
+
+            </div>
+                    
+            <div class="comments comments__write-comment">
+                <form method="post" class="comment-form">
+                    {% csrf_token %}
+                    {{ comment_form.text }}
+                    <input type="hidden" name="action" value="add_comment">
+                    <input type="hidden" name="photo_id" value="{{ photo.id }}">
+                    <button type="submit" class="button">Отправить</button>
+                </form>
+            </div>
+            
+            {% if photo.comments.all %}
+                <div class="comments">
+                  {% for comment in photo.comments.all %}
+                    <div class="comment">
+                        <div class="comment__author">
+                            {{ comment.author.first_name }} {{ comment.author.last_name }} 
+                            {% if  comment.author.maiden_name %}
+                                ({{ comment.author.maiden_name }})
+                            {% endif %}
+                        </div>
+                        <div class="comment__date">{{ comment.created_at|date:"d.m.Y H:i" }}</div>
+                        <div class="comment__comment">
+                            <div class="comment__comment__text">
+                                {{ comment.text|linebreaksbr }}
+                            </div>
+
+                        </div>
+                     </div>
+                  {% endfor %}
+                
+                </div>
+            {% endif %}
+        
+            <div class="decor-stroke decor-stroke_center">
+                <img class="horizontal" src="{% static 'reunion/img/stroke_hor.svg' %}" alt="">
+            </div>
+        </div>
+                
+                
+                
+                
+                
+                
+                
+            {% endfor %}
+
+    
+    </div>
+    </div>
+    
+    {% include 'reunion/navigation.html' %}
+
+
+{% endblock %}

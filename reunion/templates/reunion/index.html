@@ -1,28 +1,34 @@
+{% extends 'reunion/base.html' %}
+{% block title %}Встреча выпускников{% endblock %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Встреча выпускников</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap">
-    <link rel="stylesheet" href="{% static 'reunion/css/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'reunion/css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'reunion/css/style.css' %}">
-</head>
-<body>
-    <div class="main-container">
+
+{% block content %}
+
+    <section class="main-container">
+{#        <div class="tie-left"></div>#}
+    <div class="help bordered">
+        <a href={% url 'contacts' %}>
+            <img class="icon icon-ref" src="{% static 'reunion/img/icon-help.png' %}" alt="">
+        </a>
+    </div>
         <div class="login-container bordered">
+
             <div class="login-container__inner container-over-ref">
-                <a href="#" class="login-ref ref">ВОЙТИ</a>
+                <a href="{% url 'login' %}" class="login-ref ref">ВОЙТИ</a>
+            </div>
+            <div class="login-container__inner container-over-ref">
+                <a href="{% url 'mainpage' %}" class="login-ref ref">НА ГЛАВНУЮ</a>
             </div>
         </div>
+
+
         <div class="header-container bordered">
             <h1>
                 Встреча выпускников МСШ №2 1996 года выпуска
             </h1>
         </div>
         <br>
+  
         <div class="text-container bordered">
             <p>
                 Здравствуйте, одноклассники и одноклассницы! Давно не виделись.
@@ -37,10 +43,10 @@
         <br>
         <div class="question-container bordered">
             <h2 class="question-container__text">Какое было прозвище у нашего директора?</h2>
-            <form action="">
+            <form id="question-form">
                 <input id="answer-input" class="question-container__input" type="text">
                 <br>
-                <button type="button" class="container-over-ref button" onclick="checkAnswer()">ОТВЕТИТЬ</button>
+                <button type="submit" class="container-over-ref button" onclick="checkAnswer()">ОТВЕТИТЬ</button>
             </form>
         </div>
 
@@ -50,6 +56,14 @@
             </div>
         </div>
         <script>
+            const form = document.getElementById("question-form");
+
+            form.addEventListener("submit", function(e) {
+                e.preventDefault(); // отменяем перезагрузку
+                checkAnswer();      // вызываем твой код
+            });
+        </script>
+        <script>
             function checkAnswer() {
                 const input = document.getElementById("answer-input").value.trim().toLowerCase();
                 const validAnswers = ["шеф", "шэф"];
@@ -58,13 +72,14 @@
                 if (validAnswers.includes(input)) {
                     // показываем блок
                     linkBlock.classList.add("registration-link-container_active");
-                    alert("Верно! Проходи на регистрацию 👍");
+                    {#alert("Верно! Проходи на регистрацию 👍");#}
                 } else {
                     alert("Да ладно? 😜 Постучись на @Karpn79 или pavel.karmishin@yandex.ru");
                 }
             }
         </script>
-    </div>
-</body>
-</html>
+    </section>
+
+{% endblock %}
+
 
