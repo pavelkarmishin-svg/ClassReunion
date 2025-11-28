@@ -22,6 +22,7 @@ env/
 *.pyc
 db.sqlite3
 media/
+staticfiles/
 
 # PyCharm / JetBrains IDE
 .idea/
