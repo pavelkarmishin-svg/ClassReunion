@@ -36,3 +36,4 @@ staticfiles/
 Thumbs.db
 # created by virtualenv automatically
 ../.venv/Lib
+.ssh/git rm -r --cached staticfiles
