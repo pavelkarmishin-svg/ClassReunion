@@ -3,8 +3,14 @@ from django.contrib.auth.admin import UserAdmin
 from .models import User, UserGallery, PhotoComment, GroupPhotos, GroupPhotoComment
 from .forms import CustomUserCreationForm
 from django.contrib.sites.models import Site
+from django.db import OperationalError, ProgrammingError
 
-site = Site.objects.get(id=1)
+
+try:
+    site = Site.objects.get(pk=1)
+except (Site.DoesNotExist, OperationalError, ProgrammingError):
+    site = None
+
 site.domain = "localhost:8000"
 site.name = "localhost"
 site.save()
