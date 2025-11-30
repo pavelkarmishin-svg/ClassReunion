@@ -11,9 +11,10 @@ try:
 except (Site.DoesNotExist, OperationalError, ProgrammingError):
     site = None
 
-site.domain = "localhost:8000"
-site.name = "localhost"
-site.save()
+if site:
+    site.domain = "localhost:8000"
+    site.name = "localhost"
+    site.save()
 
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
