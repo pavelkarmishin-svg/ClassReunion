@@ -137,14 +137,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTH_USER_MODEL = 'reunion.User'
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.yandex.ru"
-EMAIL_PORT = 465  # или 587
-EMAIL_USE_SSL = True  # если порт 465
-# EMAIL_USE_TLS = True  # если порт 587
+EMAIL_HOST = "smtp.go2.unisender.ru"
+EMAIL_PORT = 587
+EMAIL_USE_SSL = False  # если порт 465
+EMAIL_USE_TLS = True  # если порт 587
 
-EMAIL_HOST_USER = "pavel.karmishin@yandex.ru"
-EMAIL_HOST_PASSWORD = "dleqeffkveqrcfao"
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL = EMAIL_HOST_USER
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

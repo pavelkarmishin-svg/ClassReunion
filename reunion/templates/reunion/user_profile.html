@@ -273,7 +273,7 @@
                 </div>
 
             {% endfor %}
-            {% if photos %}
+            {% if user.gallery.all %}
                 <div class="gallery-container__upload" id="load-file">
                     <form method="post" enctype="multipart/form-data" class="profile-picture__form">
                     {% csrf_token %}
