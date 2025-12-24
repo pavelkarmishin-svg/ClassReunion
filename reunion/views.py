@@ -279,6 +279,8 @@ def delete_photo(request, model):
     photo_id = int(request.POST.get("photo_id"))
     if model == UserGallery:
         photo_ids = list(request.user.gallery.values_list('id', flat=True))
+    elif model == Teachers:
+        photo_ids = list(request.user.teacher_photos.values_list('id', flat=True))
     else:
         photo_ids = list(request.user.group_photos.values_list('id', flat=True))
     photo_id_index = photo_ids.index(photo_id)
