@@ -20,6 +20,34 @@
             {% endif %}
         </h1>
     </div>
+    <div class="navigation-container__contacts">
+        {% if not user.telegram and not user.vk_profile and not ok_profile %}
+            <p>{{ user.first_name }} не оставил контактов</p> 
+            <img class="icon" src="{% static 'reunion/img/white_icons/icon-no_contacts.png' %}" alt="">
+        {% endif %}
+        {% if user.telegram %}
+                <div class="user-data__icon">
+                    <a href="{{ user.telegram }}">
+                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_telegram.png' %}" alt="">
+                    </a>
+                </div>
+            {% endif %}
+            {% if user.vk_profile %}
+                <a href="{{ user.vk_profile }}">
+                    <div class="user-data__icon">
+                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_vk.png' %}" alt="">
+                    </div>
+                </a>
+            {% endif %}
+            {% if user.ok_profile %}
+                <a href={{ user.ok_profile }}>
+                    <div class="user-data__icon">
+                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_ok.png' %}" alt="">
+                    </div>
+                </a>
+            {% endif %}
+
+        </div>
     <div class="gallery-container">
         <div class="gallery-container__header">
             {{ user.first_name }} в начальной школе

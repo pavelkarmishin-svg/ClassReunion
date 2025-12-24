@@ -22,27 +22,27 @@
             
         </div>
         <div class="navigation-container__out">
-            {% if user.telegram %}
-                <div class="user-data__icon">
-                    <a href="{{ user.telegram }}">
-                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_telegram.png' %}" alt="">
-                    </a>
-                </div>
-            {% endif %}
-            {% if user.vk_profile %}
-                <a href="{{ user.vk_profile }}">
-                    <div class="user-data__icon">
-                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_vk.png' %}" alt="">
-                    </div>
-                </a>
-            {% endif %}
-            {% if user.ok_profile %}
-                <a href={{ user.ok_profile }}>
-                    <div class="user-data__icon">
-                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_ok.png' %}" alt="">
-                    </div>
-                </a>
-            {% endif %}
+{#            {% if user.telegram %}#}
+{#                <div class="user-data__icon">#}
+{#                    <a href="{{ user.telegram }}">#}
+{#                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_telegram.png' %}" alt="">#}
+{#                    </a>#}
+{#                </div>#}
+{#            {% endif %}#}
+{#            {% if user.vk_profile %}#}
+{#                <a href="{{ user.vk_profile }}">#}
+{#                    <div class="user-data__icon">#}
+{#                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_vk.png' %}" alt="">#}
+{#                    </div>#}
+{#                </a>#}
+{#            {% endif %}#}
+{#            {% if user.ok_profile %}#}
+{#                <a href={{ user.ok_profile }}>#}
+{#                    <div class="user-data__icon">#}
+{#                        <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon_ok.png' %}" alt="">#}
+{#                    </div>#}
+{#                </a>#}
+{#            {% endif %}#}
             <a href={% url 'contacts' %}>
                 <div class="user-data__icon">
                     <img class="icon icon-ref" src="{% static 'reunion/img/white_icons/icon-help.png' %}" alt="">
