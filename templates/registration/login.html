@@ -35,7 +35,12 @@
                 <button type="submit" class="form-container__button button"> ВОЙТИ</button>
                 <div class="forgot-password">
                     <img src="{% static 'reunion/img/icon-forgot-password.png' %}" alt="">
-                    <a href="{% url 'password_reset' %}">Забыл пароль???</a>
+                    <div class="forgot-password__forgot-ref">
+                        <a href="{% url 'password_reset' %}">Забыл пароль???</a>
+                    </div>
+                    <div class="forgot-password__register-ref">
+                        <a href="{% url 'register' %}">Зарегистрироваться</a>
+                    </div>
                 </div>
             </form>
         </div>>

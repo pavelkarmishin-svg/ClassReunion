@@ -225,6 +225,14 @@
 .forgot-password {
   text-align: left;
 }
+.forgot-password__forgot-ref {
+  margin-left: 20px;
+  display: inline;
+}
+.forgot-password__register-ref {
+  margin-left: 52px;
+  margin-top: 15px;
+}
 .forgot-password img {
   height: 30px;
 }
@@ -232,7 +240,6 @@
   font-size: 1rem;
   text-decoration: none;
   color: #76362C;
-  margin-left: 45px;
 }
 
 .icon {
