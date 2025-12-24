@@ -21,10 +21,13 @@
   justify-content: space-around;
   align-items: center;
   margin: 0 auto;
-  width: 266px;
+  width: 133px;
   height: 63px;
   position: relative;
   top: 17px;
+}
+.login-container_twice {
+  width: 266px;
 }
 .login-container__inner {
   display: flex;
