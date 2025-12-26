@@ -6,15 +6,15 @@ from django.contrib.sites.models import Site
 from django.db import OperationalError, ProgrammingError
 
 
-try:
-    site = Site.objects.get(pk=1)
-except (Site.DoesNotExist, OperationalError, ProgrammingError):
-    site = None
-
-if site:
-    site.domain = "localhost:8000"
-    site.name = "localhost"
-    site.save()
+# try:
+#     site = Site.objects.get(pk=1)
+# except (Site.DoesNotExist, OperationalError, ProgrammingError):
+#     site = None
+#
+# if site:
+#     site.domain = "localhost:8000"
+#     site.name = "localhost"
+#     site.save()
 
 class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
