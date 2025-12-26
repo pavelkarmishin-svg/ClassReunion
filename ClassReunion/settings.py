@@ -136,7 +136,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'reunion.User'
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.go2.unisender.ru"
 EMAIL_PORT = 587
 EMAIL_USE_SSL = False  # если порт 465
@@ -145,7 +145,7 @@ EMAIL_USE_TLS = True  # если порт 587
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 DEFAULT_FROM_EMAIL = "Class Reunion <noreply@class-reunion-1996.ru>"
-SERVER_EMAIL = EMAIL_HOST_USER
+SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
