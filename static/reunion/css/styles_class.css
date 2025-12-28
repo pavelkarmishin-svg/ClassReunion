@@ -524,6 +524,9 @@ body {
   .gallery-container__upload {
     max-width: 300px;
   }
+  .gallery-container__upload textarea {
+    max-width: 270px;
+  }
   .gallery-container img {
     max-width: 300px;
   }
@@ -553,10 +556,19 @@ body {
   .profile-picture h2 {
     margin-top: 26px;
   }
+  .gallery-container img {
+    max-width: 260px;
+  }
   .gallery-container input {
     max-width: 200px;
   }
   .gallery-container__upload {
     max-width: 250px;
+  }
+  .gallery-container__upload textarea {
+    max-width: 200px;
+  }
+  .comments__write-comment {
+    max-width: 310px;
   }
 }
