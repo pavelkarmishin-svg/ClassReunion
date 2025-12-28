@@ -15,7 +15,7 @@ class User(AbstractUser):
     telegram = models.CharField(max_length=150, blank=True, null=True)
     vk_profile = models.CharField(max_length=150, blank=True, null=True)
     ok_profile = models.CharField(max_length=150, blank=True, null=True)
-    username = None  # полностью убираем username
+    username = models.CharField(max_length=150, blank=True, null=True)  # полностью убираем username
     email = models.EmailField(unique=True)
     picture_young = models.ImageField(upload_to='pictures', blank=True, null=True, default='defaults/default_young.png')
     picture_teenager = models.ImageField(upload_to='pictures', blank=True, null=True, default='defaults/default_teenager.png')
