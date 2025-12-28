@@ -136,15 +136,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'reunion.User'
 
-EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
-EMAIL_HOST = "smtp.go2.unisender.ru"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.yandex.ru"
 EMAIL_PORT = 587
 EMAIL_USE_SSL = False  # если порт 465
 EMAIL_USE_TLS = True  # если порт 587
 
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
-DEFAULT_FROM_EMAIL = "Class Reunion <noreply@class-reunion-1996.ru>"
+DEFAULT_FROM_EMAIL = "pavel.karmishin@yandex.ru"
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
 
 MEDIA_URL = '/media/'
@@ -168,3 +168,13 @@ LOGIN_REDIRECT_URL = '/profile/'
 # X_FRAME_OPTIONS = 'DENY'  # защита от clickjacking
 # SECURE_CONTENT_TYPE_NOSNIFF = True
 # SECURE_BROWSER_XSS_FILTER = True  # устаревшее, но можно
+
+
+
+[Service]
+Environment="EMAIL_HOST_USER=pavel.karmishin@yandex.ru"
+Environment="EMAIL_HOST_PASSWORD=zipohrmbtsxulduq"
+Environment="DJANGO_ALLOWED_HOSTS=class-reunion-1996.ru,www.class-reunion-1996.>
+
+# Environment="EMAIL_HOST_USER=pavel"
+# Environment="EMAIL_HOST_PASSWORD=6dhk3ukgqxaimc4nu44tgz5ueutkjnb4161bqcny"

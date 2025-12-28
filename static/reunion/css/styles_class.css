@@ -553,4 +553,10 @@ body {
   .profile-picture h2 {
     margin-top: 26px;
   }
+  .gallery-container input {
+    max-width: 200px;
+  }
+  .gallery-container__upload {
+    max-width: 250px;
+  }
 }
