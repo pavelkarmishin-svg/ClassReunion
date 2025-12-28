@@ -171,10 +171,10 @@ LOGIN_REDIRECT_URL = '/profile/'
 
 
 
-[Service]
-Environment="EMAIL_HOST_USER=pavel.karmishin@yandex.ru"
-Environment="EMAIL_HOST_PASSWORD=zipohrmbtsxulduq"
-Environment="DJANGO_ALLOWED_HOSTS=class-reunion-1996.ru,www.class-reunion-1996.>
+# [Service]
+# Environment="EMAIL_HOST_USER=pavel.karmishin@yandex.ru"
+# Environment="EMAIL_HOST_PASSWORD=zipohrmbtsxulduq"
+# Environment="DJANGO_ALLOWED_HOSTS=class-reunion-1996.ru,www.class-reunion-1996.>
 
 # Environment="EMAIL_HOST_USER=pavel"
 # Environment="EMAIL_HOST_PASSWORD=6dhk3ukgqxaimc4nu44tgz5ueutkjnb4161bqcny"
