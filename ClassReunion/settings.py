@@ -136,48 +136,22 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'reunion.User'
 
+
+
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.yandex.ru"
 EMAIL_PORT = 587
 EMAIL_USE_SSL = False  # если порт 465
 EMAIL_USE_TLS = True  # если порт 587
-
-# EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
-# EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
-
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 EMAIL_HOST_USER = 'pavel.karmishin@yandex.ru'
-EMAIL_HOST_PASSWORD = "zipohrmbtsxulduq"
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 SERVER_EMAIL = DEFAULT_FROM_EMAIL
+
+
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
 LOGIN_REDIRECT_URL = '/profile/'
 
-# SECURE_SSL_REDIRECT = True
-# # если SSL завершён на прокси (nginx), поставь:
-# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-#
-# SESSION_COOKIE_SECURE = True
-# CSRF_COOKIE_SECURE = True  # (см. W016)
-#
-# CSRF_TRUSTED_ORIGINS = [
-#     'https://class-reunion-1996.ru',
-#     'https://www.class-reunion-1996.ru',
-# ]
-#
-# SECURE_REFERRER_POLICY = "no-referrer-when-downgrade"  # или stricter
-# X_FRAME_OPTIONS = 'DENY'  # защита от clickjacking
-# SECURE_CONTENT_TYPE_NOSNIFF = True
-# SECURE_BROWSER_XSS_FILTER = True  # устаревшее, но можно
-
-
-
-# [Service]
-# Environment="EMAIL_HOST_USER=pavel.karmishin@yandex.ru"
-# Environment="EMAIL_HOST_PASSWORD=zipohrmbtsxulduq"
-# Environment="DJANGO_ALLOWED_HOSTS=class-reunion-1996.ru,www.class-reunion-1996.>
-
-# Environment="EMAIL_HOST_USER=pavel"
-# Environment="EMAIL_HOST_PASSWORD=6dhk3ukgqxaimc4nu44tgz5ueutkjnb4161bqcny"
