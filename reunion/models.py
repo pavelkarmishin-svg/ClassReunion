@@ -3,9 +3,8 @@ from django.contrib.auth.models import AbstractUser
 from django.urls import reverse
 from pytils.translit import slugify
 from PIL import Image
-# from django.core.files.base import ContentFile
-# from io import BytesIO
-# import os
+from .managers import UserManager
+
 
 class User(AbstractUser):
     # pass
@@ -22,6 +21,8 @@ class User(AbstractUser):
     picture_old = models.ImageField(upload_to='pictures', blank=True, null=True, default='defaults/default_old.png')
     history = models.TextField(blank=True, null=True)
     slug = models.SlugField(db_index=True, default='', null=False)
+
+    objects = UserManager()
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = []
