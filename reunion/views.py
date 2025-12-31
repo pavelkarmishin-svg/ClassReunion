@@ -1,15 +1,14 @@
 from django.contrib.auth import authenticate, login
-
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .forms import *
 from django.contrib.auth.views import PasswordChangeView
-
 from django.views.generic import ListView, DetailView
 
 
 def index(request):
     return render(request, 'reunion/index.html')
+
 
 def register(request):
     if request.method == 'POST':
@@ -24,6 +23,7 @@ def register(request):
         form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
 
+
 def user_login(request):
     form = CustomAuthenticationForm(data=request.POST or None)
     if request.method == 'POST':
@@ -36,6 +36,7 @@ def user_login(request):
                 return redirect('profile')
     return render(request, 'registration/login.html', {'form': form})
 
+
 class ShowUsersList(ListView):
     template_name = 'reunion/manepage.html'
     model = User
@@ -43,7 +44,6 @@ class ShowUsersList(ListView):
 
 
 def user_profile(request):
-
     if not request.user.is_authenticated:
         return redirect('login')
 
@@ -58,8 +58,6 @@ def user_profile(request):
     if request.method == 'POST':
 
         action = request.POST.get("action")
-
-
 
         if action == 'change_history':
             my_history_form = MyHistoryForm(request.POST, instance=request.user)
@@ -123,13 +121,11 @@ def user_profile(request):
         if action == "delete_comment":
             delete_comment(request, PhotoComment)
 
-
     return render(request, 'reunion/user_profile.html',
                   {'user_form': user_form, 'teenager_form': teenager_form,
                    'old_form': old_form, 'young_form': young_form,
                    'my_history_form': my_history_form, 'user_gallery_form': user_gallery_form,
                    'comment_form': comment_form})
-
 
 
 class CustomPasswordChangeView(PasswordChangeView):
@@ -140,6 +136,7 @@ class CustomPasswordChangeView(PasswordChangeView):
             kwargs.pop("data", None)
             kwargs.pop("files", None)
         return kwargs
+
 
 class ShowUserView(DetailView):
     template_name = 'reunion/user_info.html'
@@ -198,11 +195,12 @@ class ShowUserView(DetailView):
         # если action другой — просто вернуть GET
         return redirect(self.object.get_url())
 
+
 def contacts(request):
     return render(request, 'reunion/contacts.html')
 
-def group_photos(request):
 
+def group_photos(request):
     group_photos_form = GroupPhotoForm()
     comments_form = GroupPhotoCommentForm()
     photos = GroupPhotos.objects.all()
@@ -226,7 +224,6 @@ def group_photos(request):
         if action == "delete_photo":
             delete_photo(request, GroupPhotos)
 
-
         if action == "add_comment":
             comments_form = GroupPhotoCommentForm(request.POST)
             return add_comment(request, GroupPhotos, comments_form)
@@ -234,10 +231,10 @@ def group_photos(request):
         if action == "delete_comment":
             delete_comment(request, GroupPhotoComment)
 
-
-    return render(request, 'reunion/group_photos.html', {'group_photos_form' : group_photos_form,
-                                                         'comments_form' : comments_form,
+    return render(request, 'reunion/group_photos.html', {'group_photos_form': group_photos_form,
+                                                         'comments_form': comments_form,
                                                          'photos': photos})
+
 
 def teachers(request):
     teachers_form = TeachersForm()
@@ -271,8 +268,8 @@ def teachers(request):
             delete_comment(request, TeacherComment)
 
     return render(request, 'reunion/teachers.html', {'teachers_form': teachers_form,
-                                                         'comments_form': comments_form,
-                                                         'photos': photos})
+                                                     'comments_form': comments_form,
+                                                     'photos': photos})
 
 
 def delete_photo(request, model):
@@ -295,6 +292,7 @@ def delete_photo(request, model):
     except model.DoesNotExist:
         pass  # на случай, если кто-то подделал форму
 
+
 def delete_comment(request, model):
     comment_id = request.POST.get("comment_id")
     comment = model.objects.filter(id=comment_id, author=request.user).first()
@@ -302,6 +300,7 @@ def delete_comment(request, model):
         photo_id = comment.photo_id
         comment.delete()
         return redirect(request.path + f'#photo-{photo_id}')
+
 
 def add_comment(request, model, comment_form):
     comment = comment_form.save(commit=False)

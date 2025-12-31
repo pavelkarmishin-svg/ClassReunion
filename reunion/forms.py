@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.forms.widgets import ClearableFileInput
 from .models import User, UserGallery, PhotoComment, GroupPhotos, GroupPhotoComment, Teachers, TeacherComment
 
+
 class SocialLinksCleanMixin:
     def clean_vk_profile(self):
         value = self.cleaned_data.get("vk_profile", "")
@@ -25,6 +26,7 @@ class SocialLinksCleanMixin:
             return value
         return f"https://{soc_media}/{value}"
 
+
 class CustomUserCreationForm(UserCreationForm, SocialLinksCleanMixin):
     first_name = forms.CharField(max_length=150, label="Имя")
     last_name = forms.CharField(max_length=150, label="Фамилия")
@@ -34,11 +36,11 @@ class CustomUserCreationForm(UserCreationForm, SocialLinksCleanMixin):
         fields = ('first_name', 'last_name', 'email', 'password1', 'password2', 'maiden_name',
                   'telegram', 'vk_profile', 'ok_profile')
 
+
 class CustomUserEditForm(forms.ModelForm, SocialLinksCleanMixin):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'maiden_name', 'telegram', 'vk_profile', 'ok_profile')
-
 
 
 class CustomAuthenticationForm(AuthenticationForm):
@@ -69,10 +71,11 @@ class ChangePictureYoungForm(forms.ModelForm):
             ),
         }
 
+
 class ChangePictureTeenagerForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ('picture_teenager', )
+        fields = ('picture_teenager',)
         widgets = {
             "picture_teenager": forms.FileInput(
                 attrs={
@@ -82,10 +85,11 @@ class ChangePictureTeenagerForm(forms.ModelForm):
             ),
         }
 
+
 class ChangePictureOldForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ('picture_old', )
+        fields = ('picture_old',)
         widgets = {
             "picture_old": forms.FileInput(
                 attrs={
@@ -107,13 +111,14 @@ class UserGalleryForm(forms.ModelForm):
 class MyHistoryForm(forms.ModelForm):
     class Meta:
         model = User
-        fields = ('history', )
+        fields = ('history',)
         widgets = {
             "history": forms.Textarea(attrs={
                 "class": "auto-resize",
                 "placeholder": "Напиши свою историю..."
             })
         }
+
 
 class PhotoCommentForm(forms.ModelForm):
     class Meta:
@@ -128,11 +133,13 @@ class PhotoCommentForm(forms.ModelForm):
             })
         }
 
+
 class GroupPhotoForm(forms.ModelForm):
     class Meta:
         model = GroupPhotos
         fields = ('image', 'description')
         labels = {'image': 'Загрузи фото для альбома', 'description': 'Описание: год, класс, событие'}
+
 
 class GroupPhotoCommentForm(forms.ModelForm):
     class Meta:
@@ -147,11 +154,13 @@ class GroupPhotoCommentForm(forms.ModelForm):
             })
         }
 
+
 class TeachersForm(forms.ModelForm):
     class Meta:
         model = Teachers
         fields = ('image', 'name', 'subject')
         labels = {'image': 'Загрузи фото учителя', 'name': 'Имя:', 'subject': 'Предмет:'}
+
 
 class TeacherCommentForm(forms.ModelForm):
     class Meta:
