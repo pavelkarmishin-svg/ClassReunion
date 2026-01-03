@@ -21,6 +21,7 @@ class User(AbstractUser):
     picture_old = models.ImageField(upload_to='pictures', blank=True, null=True, default='defaults/default_old.png')
     history = models.TextField(blank=True, null=True)
     slug = models.SlugField(db_index=True, default='', null=False)
+    control_question = models.CharField(blank=True, null=False)
 
     objects = UserManager()
 

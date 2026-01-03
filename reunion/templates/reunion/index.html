@@ -34,50 +34,52 @@
                 Здравствуйте, одноклассники и одноклассницы! Давно не виделись.
                 <br>
                 В 2026 году будет 30 лет, как мы закончили Медведевскую среднюю школу №2.
-                <br>Каждый уже прожил довольно большую жизнь. Кто-то из вас продолжает видеться каждый день и всё знает друг о друге, а кто-то пошёл своей дорогой и вообще понятия не имеет как живут те, с кем он провёл немало лет в одном классе.
-                <br>Поэтому, я предлагаю вам заполнить этот сайт своими хотя бы короткими историями. Напишите где вы ещё учились, чем занимались, где работали или служили. Что важного произошло в ваших жизнях. Напишите обязательно о своих детях и внуках.
+                <br>Каждый уже прожил довольно большую жизнь. Кто-то из вас продолжает видеться каждый день и всё знает 
+                друг о друге, а кто-то пошёл своей дорогой и вообще понятия не имеет как живут те, с кем он провёл 
+                немало лет в одном классе.
+                <br>Поэтому, я предлагаю вам заполнить этот сайт своими хотя бы короткими историями. Напишите где вы ещё 
+                учились, чем занимались, где работали или служили. Что важного произошло в ваших жизнях. Напишите 
+                обязательно о своих детях и внуках.
                 <br> Ну и приложите несколько фоток в разных возрастах - от школьных до современных.
-                <br><br>А для защиты от посторонних и ботов ответьте на один простой вопрос:
-            </p>
         </div>
         <br>
-        <div class="question-container bordered">
-            <h2 class="question-container__text">Какое было прозвище у нашего директора?</h2>
-            <form id="question-form">
-                <input id="answer-input" class="question-container__input" type="text">
-                <br>
-                <button type="submit" class="container-over-ref button" onclick="checkAnswer()">ОТВЕТИТЬ</button>
-            </form>
-        </div>
+{#        <div class="question-container bordered">#}
+{#            <h2 class="question-container__text">Какое было прозвище у нашего директора?</h2>#}
+{#            <form id="question-form">#}
+{#                <input id="answer-input" class="question-container__input" type="text">#}
+{#                <br>#}
+{#                <button type="submit" class="container-over-ref button" onclick="checkAnswer()">ОТВЕТИТЬ</button>#}
+{#            </form>#}
+{#        </div>#}
 
-        <div id="registration-link" class="registration-link-container bordered">
+        <div id="registration-link" class="registration-link-container registration-link-container_active bordered">
             <div class="registration-link-container__inner container-over-ref">
                 <a href="{% url 'register' %}" class="login-ref ref">РЕГИСТРАЦИЯ</a>
             </div>
         </div>
-        <script>
-            const form = document.getElementById("question-form");
-
-            form.addEventListener("submit", function(e) {
-                e.preventDefault(); // отменяем перезагрузку
-                checkAnswer();      // вызываем твой код
-            });
-        </script>
-        <script>
-            function checkAnswer() {
-                const input = document.getElementById("answer-input").value.trim().toLowerCase();
-                const validAnswers = ["шеф", "шэф"];
-                const linkBlock = document.getElementById("registration-link");
-
-                if (validAnswers.includes(input)) {
-                    // показываем блок
-                    linkBlock.classList.add("registration-link-container_active");
+{#        <script>#}
+{#            const form = document.getElementById("question-form");#}
+{##}
+{#            form.addEventListener("submit", function(e) {#}
+{#                e.preventDefault(); // отменяем перезагрузку#}
+{#                checkAnswer();      // вызываем твой код#}
+{#            });#}
+{#        </script>#}
+{#        <script>#}
+{#            function checkAnswer() {#}
+{#                const input = document.getElementById("answer-input").value.trim().toLowerCase();#}
+{#                const validAnswers = ["шеф", "шэф"];#}
+{#                const linkBlock = document.getElementById("registration-link");#}
+{##}
+{#                if (validAnswers.includes(input)) {#}
+{#                    // показываем блок#}
+{#                    linkBlock.classList.add("registration-link-container_active");#}
                     {#alert("Верно! Проходи на регистрацию 👍");#}
-                } else {
-                    alert("Да ладно? 😜 Постучись на @Karpn79 или pavel.karmishin@yandex.ru");
-                }
-            }
-        </script>
+{#                } else {#}
+{#                    alert("Да ладно? 😜 Постучись на @Karpn79 или pavel.karmishin@yandex.ru");#}
+{#                }#}
+{#            }#}
+{#        </script>#}
     </section>
 
 {% endblock %}

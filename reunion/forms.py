@@ -2,6 +2,7 @@ from django import forms
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.forms.widgets import ClearableFileInput
 from .models import User, UserGallery, PhotoComment, GroupPhotos, GroupPhotoComment, Teachers, TeacherComment
+from django.core.exceptions import ValidationError
 
 
 class SocialLinksCleanMixin:
@@ -34,7 +35,16 @@ class CustomUserCreationForm(UserCreationForm, SocialLinksCleanMixin):
     class Meta:
         model = User
         fields = ('first_name', 'last_name', 'email', 'password1', 'password2', 'maiden_name',
-                  'telegram', 'vk_profile', 'ok_profile')
+                  'telegram', 'vk_profile', 'ok_profile', 'control_question')
+
+    def clean_control_question(self):
+        # Проверка контрольного вопроса
+        answer = self.cleaned_data.get('control_question', '')
+        # пример: ожидаемый ответ
+        EXPECTED_ANSWER = ['шеф', 'шэф']
+        if answer.lower() not in  EXPECTED_ANSWER:
+            raise ValidationError("Неверный ответ на контрольный вопрос")
+        return answer
 
 
 class CustomUserEditForm(forms.ModelForm, SocialLinksCleanMixin):
