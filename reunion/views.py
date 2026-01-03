@@ -225,6 +225,9 @@ def group_photos(request):
             delete_photo(request, GroupPhotos)
 
         if action == "add_comment":
+            if not request.user.is_authenticated:
+                messages.error(request, "Нужно войти в систему, чтобы оставить комментарий.")
+                return redirect('login')
             comments_form = GroupPhotoCommentForm(request.POST)
             return add_comment(request, GroupPhotos, comments_form)
 
@@ -261,6 +264,9 @@ def teachers(request):
             delete_photo(request, Teachers)
 
         if action == "add_comment":
+            if not request.user.is_authenticated:
+                messages.error(request, "Нужно войти в систему, чтобы оставить комментарий.")
+                return redirect('login')
             comments_form = TeacherCommentForm(request.POST)
             return add_comment(request, Teachers, comments_form)
 
