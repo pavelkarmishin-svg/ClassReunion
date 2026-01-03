@@ -12,15 +12,7 @@
             </h1>
         </div>
         <br>
-        {% if form.errors %}
-            <div class="errors-container errors bordered">
-                <h2>Что-то пошло не так!</h2>
-                {{ form.errors }}
-                <img class = "icon_big" src="{% static 'reunion/img/icon_mistake.png' %}" alt="">
-
-            </div>
-            <br>
-        {% endif %}
+        
         <div class="form-container bordered">
             <form method="post" class="form-container__form">
                 {% csrf_token %}
@@ -59,10 +51,16 @@
                     <h3>необязательно, видно другим пользователям</h3>
                 </div>
                 <div class="form-container__item">
+                    <img src="{% static 'reunion/img/icon_question.png' %}" alt="">
+                    {{ form.control_question }}
+                    <h2>А теперь вспомни: <br> какое прозвище было у нашего директора?</h2>
+                </div>
+                <div class="form-container__item">
                     <img src="{% static 'reunion/img/icon_email.png' %}" alt="">
                     {{ form.email }}
                     <h2>Электронная почта <br>обязательно, не видно другим пользователям</h2>
                 </div>
+
                 <div class="form-container__item">
                     <img src="{% static 'reunion/img/icon-password.png' %}" alt="">
                     {{ form.password1 }}
@@ -77,12 +75,18 @@
 Пароль не должен быть слишком простым и распространенным.
 Пароль не может состоять только из цифр.</p>
                 </div>
+                {% if form.errors %}
+                    <div class="errors-container errors bordered">
+                        <h2>Что-то пошло не так!</h2>
+                        {{ form.errors }}
+                        <img class = "icon_big" src="{% static 'reunion/img/icon_mistake.png' %}" alt="">
+                    </div>
+                    <br>
+                {% endif %}
                 <button type="submit" class="form-container__button button"> РЕГИСТРАЦИЯ</button>
             </form>
         </div>
         <br>
-
-
 
     </section>
 {% endblock %}
