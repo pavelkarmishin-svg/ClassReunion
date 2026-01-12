@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'reunion.apps.ReunionConfig',
     'django.contrib.sites',  # Для поддержки восстановления пароля
+    'donation.apps.DonationConfig',
 ]
 
 MIDDLEWARE = [
@@ -155,3 +156,10 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 LOGIN_REDIRECT_URL = '/profile/'
 
+# My_test_donation
+#
+# Идентификатор приложения (client_id)
+# A7395D4895C07838B483F530F33A5F222830558790D635A846C3E25A5468DD9B
+#
+# OAuth2 client_secret
+# A4E7407FD2DFCC65EF11C82F5F69162AE335A78F69ACF7A3B5AB370D70CFC37EAC735985E5711D27694CC7E2C378078470D5C98025C405F382B49C19EEF46F3E

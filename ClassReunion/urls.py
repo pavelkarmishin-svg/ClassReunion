@@ -38,9 +38,8 @@ urlpatterns = [
     path('accounts/', include('reunion.urls')),
     path("logout/", LogoutView.as_view(), name="logout"),
 
-
     path('user/<slug:username>/', views.ShowUserView.as_view(), name='user_info'),
-
+    path('donation/', include('donation.urls', namespace='donation')),
 
 
 ]

@@ -1,0 +1,21 @@
+{% extends 'reunion/base_class.html' %}
+
+{% block title %}
+    Поддержать проект
+{% endblock %}
+
+{% block content %}
+    {% include 'reunion/navigation.html' %}
+    <div class="header-container header-container_user-info">
+        <h1>
+            Поддержать проект
+        </h1>
+    </div>
+    <div class="donation-container">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Отправить</button>
+        </form>
+    </div>
+{% endblock %}
