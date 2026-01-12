@@ -6,6 +6,6 @@ app_name = 'donation'
 urlpatterns = [
     path('', views.donate, name='donate'),
     path('thanks/', views.thanks, name='thanks'),
-    # path('notification/', , name='notification'),
+    path('notification/', views.payment_notification, name='notification'),
     path('return/', views.yoomoney_return, name='yoomoney_return'),
 ]
