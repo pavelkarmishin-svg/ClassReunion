@@ -12,7 +12,7 @@
         </h1>
     </div>
     <div class="donation-container">
-        <form method="post">
+        <form method="post" action="{% url 'donation:start_payment' %}">
             {% csrf_token %}
             {{ form.as_p }}
             <button type="submit">Отправить</button>

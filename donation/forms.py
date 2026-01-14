@@ -7,8 +7,8 @@ class DonationForm(forms.ModelForm):
         fields = ('amount', 'email')
         widgets = {
             'amount': forms.NumberInput(attrs={
-                'min': 50,
-                'step': 50,
+                'min': 10,
+                'step': 10,
                 'placeholder': 'Сумма, ₽'
             }),
             'email': forms.EmailInput(attrs={

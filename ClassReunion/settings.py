@@ -156,6 +156,9 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 LOGIN_REDIRECT_URL = '/profile/'
 
+
+YOOMONEY_WALLET = '4100119447042064'
+YOOMONEY_SUCCESS_URL = "https://class-reunion-1996.ru/donation/thanks/"
 # My_test_donation
 #
 # Идентификатор приложения (client_id)

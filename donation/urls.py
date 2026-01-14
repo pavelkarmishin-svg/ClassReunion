@@ -8,4 +8,7 @@ urlpatterns = [
     path('thanks/', views.thanks, name='thanks'),
     path('notification/', views.payment_notification, name='notification'),
     path('return/', views.yoomoney_return, name='yoomoney_return'),
+    path("start/", views.start_payment, name="start_payment")
+
+
 ]
